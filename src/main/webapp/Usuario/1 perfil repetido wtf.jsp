@@ -59,13 +59,12 @@ https://templatemo.com/tm-589-lugx-gaming
           <!-- ***** Logo End ***** -->
           <!-- ***** Menu Start ***** -->
           <ul class="nav">
-            <li><a href="tendencia_juegos_page.html">Comprar juegos</a></li>
-            <li><a href="compras_juegos_page.html">Mis juegos</a></li>
-            <li><a href="vender_juegos_page.html">Vender juegos</a></li>
-            <li><a href="mis_ventas_page.html">Tus ventas</a></li>
-            <li><a href="contact.html" class="active">Contáctanos</a></li>
-            <li><a href="login_page.html">Inicia sesión</a></li>
-            <li><a href="perfil_user_page.html">Perfil<img src="assets/images/profile-header.jpg" style="border-radius: 50%;
+            <li><a href="principal_user.jsp" class="active">Home</a></li>
+            <li><a href="mis_juegos_page.jsp">Lista de juegos</a></li>
+            <li><a href="mis_ventas_page.jsp">Tus ventas</a></li>
+            <li><a href="contact.jsp">Contáctanos</a></li>
+            <li><a href="login_page.jsp">Inicia sesión</a></li>
+            <li><a href="perfil_user_page.jsp">Perfil<img src="assets/images/profile-header.jpg" style="border-radius: 50%;
                 margin-left: 5px; max-width: 30%;" alt=""></a></li>
           </ul>
           <a class='menu-trigger'>
@@ -85,9 +84,9 @@ https://templatemo.com/tm-589-lugx-gaming
     <div class="row">
       <div class="col-lg-6 align-self-center">
         <div class="caption header-text">
-          <hr/>
-          <h2>Contacto </h2>
-          <hr/>
+            <hr/>
+            <h2>Perfil de usuario </h2>
+            <hr/>
         </div>
       </div>
     </div>
@@ -97,45 +96,57 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="caption header-text">
 
           <!-- Perfil de usuario-->
+            <div class = "row">
+              <div class = "col">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Nickname:</span>
+                  <input type="text" class="form-control" id="nickname" value="@tuchiquitocraftero123" readonly>
+                </div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text">Nombre:</span>
+                  <input type="text" class="form-control" aria-label="Nombre">
+                  <span class="input-group-text">Apellido:</span>
+                  <input type="text" class="form-control" aria-label="Apellido">
+                </div>
 
-          <div class = "col">
-            <div class="form-group">
-              <h6>¡Hola!:</h6>
-              <br>
-              <p style="margin-bottom: 5%"> Si deseas contactarte con nosotros por favor envíanos tus datos y gustosos te atenderemos:
-              </p>
-            </div>
-            <div class="input-group mb-3">
-              <span class="input-group-text" id="basic-addon1">Nickname:</span>
-              <input type="text" class="form-control" id="nickname" value="@tuchiquitocraftero123" readonly>
-            </div>
-            <div class="input-group mb-3">
-              <span class="input-group-text">Nombre:</span>
-              <input type="text" class="form-control" aria-label="Nombre">
-              <span class="input-group-text">Apellido:</span>
-              <input type="text" class="form-control" aria-label="Apellido">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon2">Correo:</span>
+                  <input type="text" class="form-control" aria-label="Correo" aria-describedby="Correo">
+                </div>
+              </div>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text">Contraseña:</span>
+                <input type="password" class="form-control" id="contraseña" value="********">
+              </div>
+
             </div>
 
-            <div class="input-group mb-3">
-              <span class="input-group-text" id="basic-addon2">Correo:</span>
-              <input type="text" class="form-control" aria-label="Correo" aria-describedby="Correo">
+          <div class="row outsession">
+            <div class="d-grid gap-2 mx-auto mb-3">
+              <button type="submit" class="btn btn-secondary btn-block">
+                <i class="fa fa-save"></i> Guardar cambios
+              </button>
             </div>
+          </div>
 
 
+          <div class="row">
+              <div class="d-grid gap-2 mx-auto mb-3">
+                <button type="submit" class="btn btn-outline-warning" style="margin-top: 10px">Cambiar contraseña</button>
+              </div>
           </div>
 
 
           <div class="row outsession">
             <div class="d-grid gap-2 mx-auto mb-3">
-              <button type="submit" class="btn btn-secondary btn-block">
-                <i class="fa fa-save"></i> Guardar y enviar
-              </button>
+              <button class="btn btn-danger btn-lg">Cerrar Sesión</button>
             </div>
           </div>
 
         </div>
       </div>
-      <!--Acá finaliza perfil-->
+          <!--Acá finaliza perfil-->
 
 
       <div class="col-lg-4 offset-lg-1">

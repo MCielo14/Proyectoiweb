@@ -59,13 +59,13 @@ https://templatemo.com/tm-589-lugx-gaming
           <!-- ***** Logo End ***** -->
           <!-- ***** Menu Start ***** -->
           <ul class="nav">
-            <li><a href="tendencia_juegos_page.html">Comprar juegos</a></li>
-            <li><a href="compras_juegos_page.html">Mis juegos</a></li>
-            <li><a href="vender_juegos_page.html">Vender juegos</a></li>
-            <li><a href="mis_ventas_page.html">Tus ventas</a></li>
-            <li><a href="contact.html">Contáctanos</a></li>
-            <li><a href="login_page.html">Inicia sesión</a></li>
-            <li><a href="perfil_user_page.html" class="active">Perfil<img src="assets/images/profile-header.jpg" style="border-radius: 50%;
+            <li><a href="tendencia_juegos_page.jsp">Comprar juegos</a></li>
+            <li><a href="compras_juegos_page.jsp">Mis juegos</a></li>
+            <li><a href="vender_juegos_page.jsp">Vender juegos</a></li>
+            <li><a href="mis_ventas_page.jsp">Tus ventas</a></li>
+            <li><a href="contact.jsp">Contáctanos</a></li>
+            <li><a href="login_page.jsp">Inicia sesión</a></li>
+            <li><a href="perfil_user_page.jsp" class="active">Perfil<img src="assets/images/profile-header.jpg" style="border-radius: 50%;
                 margin-left: 5px; max-width: 30%;" alt=""></a></li>
           </ul>
           <a class='menu-trigger'>
@@ -124,7 +124,7 @@ https://templatemo.com/tm-589-lugx-gaming
 
           <div class="row outsession">
             <div class="d-grid gap-2 mx-auto mb-3">
-              <button type="submit" class="btn btn-secondary btn-block" onclick="window.location.href='principal_user.html'">
+              <button type="submit" class="btn btn-secondary btn-block" onclick="window.location.href='principal_user.jsp'">
                 <i class="fa fa-save"></i> Guardar cambios
               </button>
             </div>

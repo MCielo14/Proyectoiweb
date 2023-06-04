@@ -58,12 +58,12 @@ https://templatemo.com/tm-589-lugx-gaming
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="principal_user.html" class="active">Home</a></li>
-              <li><a href="tendencia_juegos_page.html">Lista de juegos</a></li>
-              <li><a href="mis_ventas_page.html">Tus ventas</a></li>
-              <li><a href="contact.html">Contáctanos</a></li>
-              <li><a href="login_page.html">Inicia sesión</a></li>
-              <li><a href="perfil_user_page.html">Perfil<img src="assets/images/profile-header.jpg" style="border-radius: 50%;
+              <li><a href="principal_user.jsp" class="active">Home</a></li>
+              <li><a href="tendencia_juegos_page.jsp">Lista de juegos</a></li>
+              <li><a href="mis_ventas_page.jsp">Tus ventas</a></li>
+              <li><a href="contact.jsp">Contáctanos</a></li>
+              <li><a href="login_page.jsp">Inicia sesión</a></li>
+              <li><a href="perfil_user_page.jsp">Perfil<img src="assets/images/profile-header.jpg" style="border-radius: 50%;
                 margin-left: 5px; max-width: 30%;" alt=""></a></li>
             </ul>
             <a class='menu-trigger'>
@@ -111,7 +111,7 @@ https://templatemo.com/tm-589-lugx-gaming
       <div class="row">
 
         <div class="col-lg-3 col-md-6">
-          <a href="principal_user.html">
+          <a href="principal_user.jsp">
             <div class="item">
               <div class="image">
                 <img src="assets/images/featured-01.png" alt="" style="max-width: 44px;">
@@ -122,7 +122,7 @@ https://templatemo.com/tm-589-lugx-gaming
         </div>
 
         <div class="col-lg-3 col-md-6">
-          <a href="vender_juegos_page.html">
+          <a href="vender_juegos_page.jsp">
             <div class="item">
               <div class="image">
                 <img src="assets/images/featured-02.png" alt="" style="max-width: 44px;">
@@ -133,7 +133,7 @@ https://templatemo.com/tm-589-lugx-gaming
         </div>
 
         <div class="col-lg-3 col-md-6">
-          <a href="compras_juegos_page.html">
+          <a href="compras_juegos_page.jsp">
             <div class="item">
               <div class="image">
                 <img src="assets/images/featured-03.png" alt="" style="max-width: 44px;">
@@ -144,7 +144,7 @@ https://templatemo.com/tm-589-lugx-gaming
         </div>
 
         <div class="col-lg-3 col-md-6">
-          <a href="perfil_user_page.html">
+          <a href="perfil_user_page.jsp">
             <div class="item">
               <div class="image">
                 <img src="assets/images/featured-04.png" alt="" style="max-width: 44px;">
@@ -171,20 +171,20 @@ https://templatemo.com/tm-589-lugx-gaming
 
         <div class="col-lg-3">
           <div class="main-button">
-            <a href="tendencia_juegos_page.html">Ver todos</a>
+            <a href="tendencia_juegos_page.jsp">Ver todos</a>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-6">
           <div class="item">
             <div class="thumb">
-              <a href="informacion_oferta_page.html"><img src="assets/images/trending-01.jpg" alt=""></a>
+              <a href="informacion_oferta_page.jsp"><img src="assets/images/trending-01.jpg" alt=""></a>
               <span class="price"><em>$28</em>$20</span>
             </div>
             <div class="down-content">
               <span class="category">Action</span>
               <h5>Assasin Creed</h5>
-              <a href="metodo_compra_page.html"><i class="fa fa-shopping-bag"></i></a>
+              <a href="metodo_compra_page.jsp"><i class="fa fa-shopping-bag"></i></a>
               <button onclick="window.location.href = 'informacion_oferta_page.html'" role="button" class="btn btn-primary" href="listajuego.html">Más detalles</button>
             </div>
           </div>
@@ -193,13 +193,13 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="col-lg-3 col-md-6">
           <div class="item">
             <div class="thumb">
-              <a href="informacion_juego_page.html"><img src="assets/images/trending-02.jpg" alt=""></a>
+              <a href="informacion_juego_page.jsp"><img src="assets/images/trending-02.jpg" alt=""></a>
               <span class="price">$44</span>
             </div>
             <div class="down-content">
               <span class="category">Action</span>
               <h5>Assasin Creed</h5>
-              <a href="metodo_compra_page.html"><i class="fa fa-shopping-bag"></i></a>
+              <a href="metodo_compra_page.jsp"><i class="fa fa-shopping-bag"></i></a>
               <button onclick="window.location.href = 'informacion_juego_page.html'" role="button" class="btn btn-primary" >Más detalles</button>
             </div>
           </div>
@@ -208,13 +208,13 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="col-lg-3 col-md-6">
           <div class="item">
             <div class="thumb">
-              <a href="informacion_oferta_page.html"><img src="assets/images/trending-03.jpg" alt=""></a>
+              <a href="informacion_oferta_page.jsp"><img src="assets/images/trending-03.jpg" alt=""></a>
               <span class="price"><em>$64</em>$44</span>
             </div>
             <div class="down-content">
               <span class="category">Action</span>
               <h5>Assasin Creed</h5>
-              <a href="metodo_compra_page.html"><i class="fa fa-shopping-bag"></i></a>
+              <a href="metodo_compra_page.jsp"><i class="fa fa-shopping-bag"></i></a>
               <button onclick="window.location.href = 'informacion_oferta_page.html'" role="button" class="btn btn-primary">Más detalles</button>
             </div>
           </div>
@@ -223,13 +223,13 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="col-lg-3 col-md-6">
           <div class="item">
             <div class="thumb">
-              <a href="informacion_juego_page.html"><img src="assets/images/trending-04.jpg" alt=""></a>
+              <a href="informacion_juego_page.jsp"><img src="assets/images/trending-04.jpg" alt=""></a>
               <span class="price">$32</span>
             </div>
             <div class="down-content">
               <span class="category">Action</span>
               <h5>Assasin Creed</h5>
-              <a href="metodo_compra_page.html"><i class="fa fa-shopping-bag"></i></a>
+              <a href="metodo_compra_page.jsp"><i class="fa fa-shopping-bag"></i></a>
               <button onclick="window.location.href = 'informacion_juego_page.html'" role="button" class="btn btn-primary ">Más detalles</button>
             </div>
           </div>

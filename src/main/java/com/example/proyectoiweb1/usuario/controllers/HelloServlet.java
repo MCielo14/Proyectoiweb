@@ -1,4 +1,4 @@
-package com.example.proyectoiweb1;
+package com.example.proyectoiweb1.usuario.controllers;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
@@ -6,8 +6,8 @@ import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 
-@WebServlet(name = "Servletjuegos", value = "/Servletjuegos")
-public class Servletjuegos extends HttpServlet {
+@WebServlet(name = "HelloServlet", value = "/HelloServlet")
+public class HelloServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

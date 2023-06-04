@@ -39,7 +39,7 @@
 										<input type="password" class="form-control" required aria-label="password">
 										</div>
 										<div class="form-group">
-											<button type="submit" class="form-control btn btn-primary submit px-3" onclick="window.location.href='tendencia_juegos_page.html'">
+											<button type="submit" class="form-control btn btn-primary submit px-3" onclick="window.location.href='tendencia_juegos_page.jsp'">
 												Inicia sesión
 											</button>
 										</div>

@@ -60,13 +60,13 @@ https://templatemo.com/tm-589-lugx-gaming
           <!-- ***** Logo End ***** -->
           <!-- ***** Menu Start ***** -->
           <ul class="nav">
-            <li><a href="tendencia_juegos_page.html">Comprar juegos</a></li>
-            <li><a href="compras_juegos_page.html" class="active">Mis juegos</a></li>
-            <li><a href="vender_juegos_page.html">Vender juegos</a></li>
-            <li><a href="mis_ventas_page.html">Tus ventas</a></li>
-            <li><a href="contact.html">Contáctanos</a></li>
-            <li><a href="login_page.html">Inicia sesión</a></li>
-            <li><a href="perfil_user_page.html">Perfil<img src="assets/images/profile-header.jpg" style="border-radius: 50%;
+            <li><a href="tendencia_juegos_page.jsp">Comprar juegos</a></li>
+            <li><a href="compras_juegos_page.jsp">Mis juegos</a></li>
+            <li><a href="vender_juegos_page.jsp">Vender juegos</a></li>
+            <li><a href="mis_ventas_page.jsp" class="active">Tus ventas</a></li>
+            <li><a href="contact.jsp">Contáctanos</a></li>
+            <li><a href="login_page.jsp">Inicia sesión</a></li>
+            <li><a href="perfil_user_page.jsp">Perfil<img src="assets/images/profile-header.jpg" style="border-radius: 50%;
                 margin-left: 5px; max-width: 30%;" alt=""></a></li>
           </ul>
           <a class='menu-trigger'>
@@ -84,6 +84,7 @@ https://templatemo.com/tm-589-lugx-gaming
 <div class="main-banner">
   <div class="container">
     <div class="row">
+
       <div class="col-lg-6 align-self-center">
         <div class="caption header-text">
           <h6>Bienvenido a Ergo Proxy</h6>
@@ -111,76 +112,19 @@ https://templatemo.com/tm-589-lugx-gaming
 </div>
 <!-- ***** Fin de encabezado principal ***** -->
 
-<!-- ***** Contenedor de opciones ***** -->
-<div class="features">
-  <div class="container">
-    <div class="row">
-
-      <div class="col-lg-3 col-md-6">
-        <a href="principal_user.html">
-          <div class="item">
-            <div class="image">
-              <img src="assets/images/featured-01.png" alt="" style="max-width: 44px;">
-            </div>
-            <h4>COMPRAR JUEGOS</h4>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-lg-3 col-md-6">
-        <a href="vender_juegos_page.html">
-          <div class="item">
-            <div class="image">
-              <img src="assets/images/featured-02.png" alt="" style="max-width: 44px;">
-            </div>
-            <h4>VENDER JUEGOS</h4>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-lg-3 col-md-6">
-        <a href="compras_juegos_page.html">
-        <div class="item">
-            <div class="image">
-              <img src="assets/images/featured-03.png" alt="" style="max-width: 44px;">
-            </div>
-            <h4>MIS JUEGOS</h4>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-lg-3 col-md-6">
-        <a href="perfil_user_page.html">
-          <div class="item">
-            <div class="image">
-              <img src="assets/images/featured-04.png" alt="" style="max-width: 44px;">
-            </div>
-            <h4>MI PERFIL</h4>
-          </div>
-        </a>
-      </div>
-
-    </div>
-  </div>
-</div>
-<!-- ***** Fin Contenedor de opciones ***** -->
-
 <div class="section trending">
   <div class="container">
     <div class="row">
 
       <div class="col-lg-9">
         <div class="section-heading">
-          <h6>Mis juegos</h6>
-          <h2>Juegos comprados o reservados</h2>
+          <h6>Mis ventas</h6>
+          <h2>Juegos propuestos a ser vendidos</h2>
           <hr size="2px" color="gray"  style="height: 1px;"/>
         </div>
       </div>
 
       <div class="col-lg-3">
-        <div class="main-button">
-          <a href="compras_juegos_page.html">Ver todos</a>
-        </div>
       </div>
 
       <div class="col-lg-3 col-md-6">
@@ -191,8 +135,8 @@ https://templatemo.com/tm-589-lugx-gaming
           <div class="down-content">
             <span class="category">Action</span>
             <h5 class="card-title">The last of us 2</h5>
-            <p class="card-text"><em>Pendiente para recoger</em></p>
-            <button role="button" class="btn btn-primary ">Más detalles</button>
+            <p class="card-text"><em>Pendiente</em></p>
+            <button role="button" class="btn btn-primary " onclick="window.location.href = 'juego_pendiente.html'">Más detalles</button>
           </div>
         </div>
       </div>
@@ -206,8 +150,8 @@ https://templatemo.com/tm-589-lugx-gaming
           <div class="down-content">
             <span class="category">Action</span>
             <h5 class="card-title">The last of us 2</h5>
-            <p class="card-text"><em>Pendiente para recoger</em></p>
-            <button role="button" class="btn btn-primary ">Más detalles</button>
+            <p class="card-text"><em>Pendiente</em></p>
+            <button role="button" class="btn btn-primary" onclick="window.location.href = 'juego_pendiente.html'">Más detalles</button>
           </div>
         </div>
       </div>
@@ -221,23 +165,82 @@ https://templatemo.com/tm-589-lugx-gaming
           <div class="down-content">
             <span class="category">Action</span>
             <h5 class="card-title">The last of us 2</h5>
-            <p class="card-text"><em>Pendiente para recoger</em></p>
-            <button role="button" class="btn btn-primary ">Más detalles</button>
+            <p class="card-text"><em>Pendiente</em></p>
+            <button role="button" class="btn btn-primary" onclick="window.location.href = 'juego_pendiente.html'">Más detalles</button>
           </div>
         </div>
       </div>
 
 
       <div class="col-lg-3 col-md-6">
-        <div class="item">
+        <div class="item" style="background: #ffb207">
           <div class="thumb">
             <a href="#"><img src="assets/images/trending-04.jpg" alt=""></a>
           </div>
-          <div class="down-content">
+          <div class="down-content" style="background: #ffb207">
             <span class="category">Action</span>
             <h5 class="card-title">The last of us 2</h5>
-            <p class="card-text"><em>Pendiente para recoger</em></p>
-            <button role="button" class="btn btn-primary ">Más detalles</button>
+            <p class="card-text"><em>No aceptado</em></p>
+            <button role="button" class="btn btn-primary" onclick="window.location.href = 'juego_no_aceptado.html'">Editar detalles</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="item"  style="background: #ffb207">
+          <div class="thumb">
+            <a href="#"><img src="assets/images/trending-01.jpg" alt=""></a>
+          </div>
+          <div class="down-content" style="background: #ffb207">
+            <span class="category">Action</span>
+            <h5 class="card-title">The last of us 2</h5>
+            <p class="card-text"><em>No aceptado</em></p>
+            <button role="button" class="btn btn-primary" onclick="window.location.href = 'juego_no_aceptado.html'">Editar detalles</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-3 col-md-6">
+        <div class="item" style="background: #ffb207">
+          <div class="thumb">
+            <a href="#"><img src="assets/images/trending-02.jpg" alt=""></a>
+          </div>
+          <div class="down-content" style="background: #ffb207">
+            <span class="category">Action</span>
+            <h5 class="card-title">The last of us 2</h5>
+            <p class="card-text"><em>No aceptado</em></p>
+            <button role="button" class="btn btn-primary" onclick="window.location.href = 'juego_no_aceptado.html'">Editar detalles</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-3 col-md-6">
+        <div class="item" style="background: darkgray">
+          <div class="thumb">
+            <a href="#"><img src="assets/images/trending-03.jpg" alt=""></a>
+          </div>
+          <div class="down-content" style="background: darkgray">
+            <span class="category">Action</span>
+            <h5 class="card-title">The last of us 2</h5>
+            <p class="card-text"><em>Retirado</em></p>
+            <button role="button" class="btn btn-primary" onclick="window.location.href = 'juego_retirado.html'">Más detalles</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-3 col-md-6">
+        <div class="item" style="background: #ff424b">
+          <div class="thumb">
+            <a href="#"><img src="assets/images/trending-04.jpg" alt=""></a>
+          </div>
+          <div class="down-content" style="background: #ff424b">
+            <span class="category">Action</span>
+            <h5 class="card-title">The last of us 2</h5>
+            <p class="card-text"><em>Rechazado</em></p>
+            <button role="button" class="btn btn-primary" onclick="window.location.href = 'juego_rechazado.html'">Más detalles</button>
           </div>
         </div>
       </div>
@@ -249,15 +252,15 @@ https://templatemo.com/tm-589-lugx-gaming
 <div class="section most-played">
   <div class="container">
     <div class="row">
-      <div class="col-lg-9">
+      <div class="col-lg-6">
         <div class="section-heading">
           <h6>TOP GAMES</h6>
           <h2>Más jugados</h2>
         </div>
       </div>
-      <div class="col-lg-3">
+      <div class="col-lg-6">
         <div class="main-button">
-          <a href="listajuego.html">Ver todos</a>
+          <a href="tendencia_juegos_page.jsp">Ver todos</a>
         </div>
       </div>
       <div class="col-lg-2 col-md-6 col-sm-6">

@@ -17,7 +17,7 @@
 
   <!-- Additional CSS Files -->
   <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/estilo_usuario.css">
+  <link rel="stylesheet" href="assets/css/estilo_admin.css">
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/animate.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
@@ -59,13 +59,13 @@ https://templatemo.com/tm-589-lugx-gaming
           <!-- ***** Logo End ***** -->
           <!-- ***** Menu Start ***** -->
           <ul class="nav">
-            <li><a href="tendencia_juegos_page.html">Comprar juegos</a></li>
-            <li><a href="compras_juegos_page.html">Mis juegos</a></li>
-            <li><a href="vender_juegos_page.html">Vender juegos</a></li>
-            <li><a href="mis_ventas_page.html">Tus ventas</a></li>
-            <li><a href="contact.html">Contáctanos</a></li>
-            <li><a href="login_page.html">Inicia sesión</a></li>
-            <li><a href="perfil_user_page.html">Perfil<img src="assets/images/profile-header.jpg" style="border-radius: 50%;
+            <li><a href="principal_admin.html">Lista de juegos</a></li>
+            <li><a href="propuestos_vendidos.html">Solicitudes</a></li>
+            <li><a href="propuestos_comprados.html">Propuestas</a></li>
+            <li><a href="reservados_page.html">Reservas</a></li>
+            <!-- <li><a href="contact.jsp">Contacto</a></li>-->
+            <li><a href="login.html">Inicia sesión</a></li>
+            <li><a href="perfil_admin_page.html">Perfil<img src="assets/images/profile-header.jpg" style="border-radius: 50%;
                 margin-left: 5px; max-width: 30%;" alt=""></a></li>
           </ul>
           <a class='menu-trigger'>
@@ -86,19 +86,13 @@ https://templatemo.com/tm-589-lugx-gaming
       <div class="col-lg-6 align-self-center">
         <div class="caption header-text">
           <hr/>
-          <h3 style="font-size: 35px">Call Of Duty MW2: No aceptado </h3>
+          <h3 style="font-size: 40px">Añadir nuevo juego</h3>
           <hr/>
         </div>
       </div>
     </div>
-    <div class="row venta">
-    <div class="form-group">
-      <h5>Motivo por el que no fue aceptado:</h5>
-      <textarea class="form-control" id="descripcion_editar"  aria-label="descripcion_editar" rows="3" style="height: 200px" readonly>¡Hola! Queremos agradecer que hayas tratado de enviar tu juego. La verdad es que encontramos un error en la descripción y por lo tanto nos gustaría que lo arregles. Si en caso desistes, recuerda que puedes cancelar tu solicitud. ¡Muchas gracias!</textarea>
-    </div>
-    </div>
 
-    <div class="row">
+    <div class="row oferta">
       <div class="col-lg-6 align-self-center">
         <div class="caption header-text">
 
@@ -106,23 +100,23 @@ https://templatemo.com/tm-589-lugx-gaming
           <div class = "row venta">
             <div class="form-group">
               <h5>Ingrese nombre del juego:</h5>
-              <input type="text" class="form-control" aria-label="nombre_juego" value="Call of Duty MW2" readonly>
+              <input type="text" class="form-control" aria-label="nombre_juego">
             </div>
 
             <div class="form-group">
               <h5>Descripción:</h5>
-              <textarea class="form-control" id="descripcion_venta"  aria-label="descripcion_venta" rows="3" style="height: 150px" readonly>Juego de un mundo en cubos sobre supervivencia y multijugador</textarea>
+              <textarea class="form-control" id="descripcion_venta"  aria-label="descripcion_venta" rows="3" style="height: 150px"></textarea>
             </div>
 
             <div class="form-group">
               <div class="row">
                 <div class="col">
                   <h5>Precio unitario:</h5>
-                  <input type="text" class="form-control" id="precio" aria-label="precio" value="S/. 40" readonly>
+                  <input type="text" class="form-control" id="precio" aria-label="precio">
                 </div>
                 <div class="col">
                   <h5>Unidades:</h5>
-                  <input type="number" class="form-control" id="unidades" aria-label="unidades" min="0" value="5" readonly>
+                  <input type="number" class="form-control" id="unidades" aria-label="unidades" min="0">
                 </div>
                 <div class="col">
                   <h5>Precio total:</h5>
@@ -133,29 +127,26 @@ https://templatemo.com/tm-589-lugx-gaming
               <div class="row">
                 <div class="col">
                   <h5>Consola:</h5>
-                  <select class="form-control" id="consola" >
+                  <select class="form-control" id="consola">
                     <option disabled selected>Selecciona una consola</option>
-                    <option disabled selected>PlayStation</option>
-                    <option disabled selected>Xbox</option>
-                    <option disabled selected>Nintendo</option>
-                    <option disabled selected>PC</option>
+                    <option>PlayStation</option>
+                    <option>Xbox</option>
+                    <option>Nintendo</option>
+                    <option>PC</option>
                   </select>
                 </div>
                 <div class="col">
                   <h5>Género:</h5>
                   <select class="form-control" id="genero">
                     <option disabled selected>Selecciona un género</option>
-                    <option disabled selected>Acción</option>
-                    <option disabled selected>Aventura</option>
-                    <option disabled selected>Deporte</option>
-                    <option disabled selected>Estrategia</option>
-                    <option disabled selected>Rol</option>
+                    <option>Acción</option>
+                    <option>Aventura</option>
+                    <option>Deporte</option>
+                    <option>Estrategia</option>
+                    <option>Rol</option>
                   </select>
                 </div>
               </div>
-
-
-
 
             </div>
 
@@ -165,10 +156,11 @@ https://templatemo.com/tm-589-lugx-gaming
       <!--Acá finaliza formulario-->
 
 
-      <div class="col-lg-4 offset-lg-2">
+      <div class="col-lg-4 offset-lg-1">
         <div class="right-image">
-          <h5 style="color: white; margin-bottom: 15px; margin-top: 30px" >Imagen Subida:</h5>
-          <img class="card-img-top" src="assets/images/single-game.jpg" alt="Imagen del juego" id="imagen" alt="Imagen" style="cursor: pointer;">
+          <h5 style="color: white; margin-bottom: 15px; margin-top: 30px" >Subir Imagen:</h5>
+          <img class="card-img-top" src="https://via.placeholder.com/200" alt="Imagen del juego" id="imagen" alt="Imagen" style="cursor: pointer;">
+          <input type="file" id="archivo" style="display: none;">
         </div>
       </div>
     </div>
@@ -181,10 +173,8 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="caption header-text">
           <div class="row">
             <div class="d-grid gap-2 mx-auto mb-3">
-              <button type="submit" class="btn btn-secondary btn-block" onclick="window.location.href = 'vender_juegos_page.html'">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-                  <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
-                </svg> Editar solicitud
+              <button type="submit" class="btn btn-secondary btn-block" onclick="window.location.href = 'juego_pendiente.jsp'">
+                <i class="fa fa-save"></i> Guardar cambios y salir
               </button>
             </div>
           </div>
@@ -192,7 +182,7 @@ https://templatemo.com/tm-589-lugx-gaming
 
           <div class="row">
             <div class="d-grid gap-2 mx-auto mb-3">
-              <button class="btn btn-danger btn-lg" onclick="window.location.href = 'juego_retirado.html'">Cancelar solicitud</button>
+              <button class="btn btn-danger btn-lg" onclick="window.location.href = 'principal_user.jsp'">Cancelar</button>
             </div>
           </div>
         </div>
@@ -227,6 +217,14 @@ https://templatemo.com/tm-589-lugx-gaming
 <script src="assets/js/owl-carousel.js"></script>
 <script src="assets/js/counter.js"></script>
 <script src="assets/js/custom.js"></script>
+<script>
+  const imagen = document.getElementById('imagen');
+  const archivo = document.getElementById('archivo');
+
+  imagen.addEventListener('click', () => {
+    archivo.click();
+  });
+</script>
 
 </body>
 </html>

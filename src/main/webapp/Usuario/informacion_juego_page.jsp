@@ -61,13 +61,13 @@ https://templatemo.com/tm-589-lugx-gaming
           <!-- ***** Logo End ***** -->
           <!-- ***** Menu Start ***** -->
           <ul class="nav">
-            <li><a href="tendencia_juegos_page.html">Comprar juegos</a></li>
-            <li><a href="compras_juegos_page.html">Mis juegos</a></li>
-            <li><a href="vender_juegos_page.html">Vender juegos</a></li>
-            <li><a href="mis_ventas_page.html">Tus ventas</a></li>
-            <li><a href="contact.html">Contáctanos</a></li>
-            <li><a href="login_page.html">Inicia sesión</a></li>
-            <li><a href="perfil_user_page.html">Perfil<img src="assets/images/profile-header.jpg" style="border-radius: 50%;
+            <li><a href="tendencia_juegos_page.jsp">Comprar juegos</a></li>
+            <li><a href="compras_juegos_page.jsp">Mis juegos</a></li>
+            <li><a href="vender_juegos_page.jsp">Vender juegos</a></li>
+            <li><a href="mis_ventas_page.jsp">Tus ventas</a></li>
+            <li><a href="contact.jsp">Contáctanos</a></li>
+            <li><a href="login_page.jsp">Inicia sesión</a></li>
+            <li><a href="perfil_user_page.jsp">Perfil<img src="assets/images/profile-header.jpg" style="border-radius: 50%;
                 margin-left: 5px; max-width: 30%;" alt=""></a></li>
           </ul>
           <a class='menu-trigger'>
@@ -98,7 +98,6 @@ https://templatemo.com/tm-589-lugx-gaming
     <div class="row">
       <div class="col-lg-6 align-self-center">
         <div class="caption header-text">
-
           <h3>The last of us 2 </h3>
           <div class="card-body">
             <h6>Star Rating:</h6>
@@ -114,7 +113,9 @@ https://templatemo.com/tm-589-lugx-gaming
           <div class="form-group">
             <h6>Precio:</h6>
             <label>S/.280</label>
+            <br>
           </div>
+
           <br>
 
           <div class="form-group">
@@ -145,14 +146,14 @@ https://templatemo.com/tm-589-lugx-gaming
 
           <div class="right-objeto">
             <div class="main-button">
-              <a href="metodo_compra_page.html">Comprar</a>
+              <a href="metodo_compra_page.jsp">Comprar</a>
             </div>
           </div>
           <br>
 
           <div class="left-objeto">
             <button type="submit" class="btn btn-warning btn-block">
-              <span class="fa fa-star"></span><a href="valorar_juego_page.html" style="color: black">Añadir valoración</a>
+              <span class="fa fa-star"></span><a href="valorar_juego_page.jsp" style="color: black">Añadir valoración</a>
             </button>
           </div>
 
@@ -164,11 +165,7 @@ https://templatemo.com/tm-589-lugx-gaming
       <div class="col-lg-5 offset-lg-1">
         <div class="right-image">
           <img src="https://image.api.playstation.com/vulcan/img/rnd/202010/2618/w48z6bzefZPrRcJHc7L8SO66.png" alt="">
-          <span class="offer-text">Oferta!</span>
-          <span class="offer">-90%</span>
         </div>
-
-
       </div>
 
     </div>
