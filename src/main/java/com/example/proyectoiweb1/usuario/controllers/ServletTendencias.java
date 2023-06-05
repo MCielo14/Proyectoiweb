@@ -1,0 +1,28 @@
+package com.example.proyectoiweb1.usuario.controllers;
+
+import com.example.proyectoiweb1.usuario.models.daos.JuegosDaoUsuario;
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
+import jakarta.servlet.annotation.*;
+
+import java.io.IOException;
+
+@WebServlet(name = "ServletTendencias", value = "/ServletTendencias")
+public class ServletTendencias extends HttpServlet {
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html");
+
+
+        JuegosDaoUsuario juegosDao = new JuegosDaoUsuario();
+        request.setAttribute("listaMasJugados", juegosDao.listarMasJugados());
+        request.setAttribute("listaJuegos", juegosDao.listarJuegos());
+
+        request.getRequestDispatcher("Usuario/tendencia_juegos_page.jsp").forward(request, response);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
+}

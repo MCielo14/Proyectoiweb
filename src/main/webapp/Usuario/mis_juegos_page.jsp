@@ -12,16 +12,16 @@
   <title>Ergo Proxy - Compra y venta de juegos</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<%=request.getContextPath()%>/Usuario/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
   <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/estilo_usuario.css">
-  <link rel="stylesheet" href="assets/css/owl.css">
-  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/Usuario/assets/css/fontawesome.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/Usuario/assets/css/estilo_usuario.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/Usuario/assets/css/owl.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/Usuario/assets/css/animate.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="assets/css/card_style.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/Usuario/assets/css/card_style.css">
 
   <!--
 
@@ -55,7 +55,7 @@ https://templatemo.com/tm-589-lugx-gaming
         <nav class="main-nav">
           <!-- ***** Logo Start ***** -->
           <a href="index.html" class="logo">
-            <img src="assets/images/logo.png" alt="" style="width: 65px;">
+            <img src="<%=request.getContextPath()%>/Usuario/assets/images/logo.png" alt="" style="width: 65px;">
           </a>
           <!-- ***** Logo End ***** -->
           <!-- ***** Menu Start ***** -->

@@ -12,16 +12,16 @@
   <title>Ergo Proxy - Compra y venta de juegos</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<%=request.getContextPath()%>/Usuario/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
   <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/estilo_usuario.css">
-  <link rel="stylesheet" href="assets/css/owl.css">
-  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/Usuario/assets/css/fontawesome.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/Usuario/assets/css/estilo_usuario.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/Usuario/assets/css/owl.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/Usuario/assets/css/animate.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="assets/css/card_style.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/Usuario/assets/css/card_style.css">
 
   <!--
 
@@ -55,18 +55,18 @@ https://templatemo.com/tm-589-lugx-gaming
         <nav class="main-nav">
           <!-- ***** Logo Start ***** -->
           <a href="index.html" class="logo">
-            <img src="assets/images/logo.png" alt="" style="width: 65px;">
+            <img src="<%=request.getContextPath()%>/Usuario/assets/images/logo.png" alt="" style="width: 65px;">
           </a>
           <!-- ***** Logo End ***** -->
           <!-- ***** Menu Start ***** -->
           <ul class="nav">
-            <li><a href="tendencia_juegos_page.jsp" class="active">Comprar juegos</a></li>
-            <li><a href="compras_juegos_page.jsp">Mis juegos</a></li>
-            <li><a href="vender_juegos_page.jsp">Vender juegos</a></li>
-            <li><a href="mis_ventas_page.jsp">Tus ventas</a></li>
-            <li><a href="contact.jsp">Contáctanos</a></li>
-            <li><a href="login_page.jsp">Inicia sesión</a></li>
-            <li><a href="perfil_user_page.jsp">Perfil<img src="assets/images/profile-header.jpg" style="border-radius: 50%;
+            <li><a href="<%=request.getContextPath()%>/Usuario/tendencia_juegos_page.jsp" class="active">Comprar juegos</a></li>
+            <li><a href="<%=request.getContextPath()%>/Usuario/compras_juegos_page.jsp">Mis juegos</a></li>
+            <li><a href="<%=request.getContextPath()%>/Usuario/vender_juegos_page.jsp">Vender juegos</a></li>
+            <li><a href="<%=request.getContextPath()%>/Usuario/mis_ventas_page.jsp">Tus ventas</a></li>
+            <li><a href="<%=request.getContextPath()%>/Usuario/contact.jsp">Contáctanos</a></li>
+            <li><a href="<%=request.getContextPath()%>/Usuario/login_page.jsp">Inicia sesión</a></li>
+            <li><a href="<%=request.getContextPath()%>/Usuario/perfil_user_page.jsp">Perfil<img src="<%=request.getContextPath()%>/Usuario/assets/images/profile-header.jpg" style="border-radius: 50%;
                 margin-left: 5px; max-width: 30%;" alt=""></a></li>
           </ul>
           <a class='menu-trigger'>
@@ -101,7 +101,7 @@ https://templatemo.com/tm-589-lugx-gaming
       </div>
       <div class="col-lg-4 offset-lg-2">
         <div class="right-image">
-          <img src="assets/images/banner-image.jpg" alt="">
+          <img src="<%=request.getContextPath()%>/Usuario/assets/images/banner-image.jpg" alt="">
           <span class="price">$22</span>
           <span class="offer">-90%</span>
         </div>
@@ -119,7 +119,7 @@ https://templatemo.com/tm-589-lugx-gaming
       <div class="col-lg-9">
         <div class="section-heading">
           <h6>Tendencia</h6>
-          <h2>Todos los juegos en tendencia:</h2>
+          <h2>Todos los juegos disponibles a comprar:</h2>
           <hr size="2px" color="gray"  style="height: 1px;"/>
         </div>
       </div>
@@ -130,14 +130,14 @@ https://templatemo.com/tm-589-lugx-gaming
       <div class="col-lg-3 col-md-6">
         <div class="item">
           <div class="thumb">
-            <a href="informacion_oferta_page.jsp"><img src="assets/images/trending-01.jpg" alt=""></a>
+            <a href="<%=request.getContextPath()%>/Usuario/informacion_oferta_page.jsp"><img src="<%=request.getContextPath()%>/Usuario/assets/images/trending-01.jpg" alt=""></a>
             <span class="price"><em>$28</em>$20</span>
           </div>
           <div class="down-content">
             <span class="category">Action</span>
             <h5>Assasin Creed</h5>
             <p class="card-text"><em>Un juego buenísimo!</em></p>
-            <a href="metodo_compra_page.jsp"><i class="fa fa-shopping-bag"></i></a>
+            <a href="<%=request.getContextPath()%>/Usuario/metodo_compra_page.jsp"><i class="fa fa-shopping-bag"></i></a>
             <button onclick="window.location.href = 'informacion_oferta_page.html'" role="button" class="btn btn-primary" href="listajuego.html">Más detalles</button>
           </div>
         </div>

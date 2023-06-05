@@ -14,7 +14,7 @@ public class JuegosDaoUsuario {
             e.printStackTrace();
         }
 
-        String sql = "select * from juegos";
+        String sql = "select * from juegos limit 12";
         String url = "jdbc:mysql://localhost:3306/mydb";
 
         try (Connection connection = DriverManager.getConnection(url, "root", "root");
@@ -40,4 +40,34 @@ public class JuegosDaoUsuario {
         return  listaJuegos;
 
     }
+    public ArrayList<Juegos> listarMasJugados() {
+        ArrayList<Juegos> listaMasJugados = new ArrayList<>();
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        String sql = "select * from juegos where rating>4.5";
+        String url = "jdbc:mysql://localhost:3306/mydb";
+
+        try (Connection connection = DriverManager.getConnection(url, "root", "root");
+             Statement stmt = connection.createStatement();
+             ResultSet resultSet = stmt.executeQuery(sql)) {
+
+            while (resultSet.next()) {
+                Juegos juego = new Juegos();
+                juego.setNombre(resultSet.getString(2));
+                juego.setGenero(resultSet.getString(5));
+                listaMasJugados.add(juego);
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return  listaMasJugados;
+
+    }
+
 }

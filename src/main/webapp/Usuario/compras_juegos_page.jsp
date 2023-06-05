@@ -18,16 +18,16 @@
   <title>Ergo Proxy - Compra y venta de juegos</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<%=request.getContextPath()%>/Usuario/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
   <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/estilo_usuario.css">
-  <link rel="stylesheet" href="assets/css/owl.css">
-  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/Usuario/assets/css/fontawesome.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/Usuario/assets/css/estilo_usuario.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/Usuario/assets/css/owl.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/Usuario/assets/css/animate.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="assets/css/card_style.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/Usuario/assets/css/card_style.css">
 
   <!--
 
@@ -60,19 +60,19 @@ https://templatemo.com/tm-589-lugx-gaming
       <div class="col-12">
         <nav class="main-nav">
           <!-- ***** Logo Start ***** -->
-          <a href="index.html" class="logo">
-            <img src="assets/images/logo.png" alt="" style="width: 65px;">
+          <a href="<%=request.getContextPath()%>/Usuario/index.html" class="logo">
+            <img src="<%=request.getContextPath()%>/Usuario/assets/images/logo.png" alt="" style="width: 65px;">
           </a>
           <!-- ***** Logo End ***** -->
           <!-- ***** Menu Start ***** -->
           <ul class="nav">
-            <li><a href="tendencia_juegos_page.jsp">Comprar juegos</a></li>
-            <li><a href="compras_juegos_page.jsp" class="active">Mis juegos</a></li>
-            <li><a href="vender_juegos_page.jsp">Vender juegos</a></li>
-            <li><a href="mis_ventas_page.jsp">Tus ventas</a></li>
-            <li><a href="contact.jsp">Contáctanos</a></li>
-            <li><a href="login_page.jsp">Inicia sesión</a></li>
-            <li><a href="perfil_user_page.jsp">Perfil<img src="assets/images/profile-header.jpg" style="border-radius: 50%;
+            <li><a href="<%=request.getContextPath()%>/Usuario/tendencia_juegos_page.jsp">Comprar juegos</a></li>
+            <li><a href="<%=request.getContextPath()%>/Usuario/compras_juegos_page.jsp" class="active">Mis juegos</a></li>
+            <li><a href="<%=request.getContextPath()%>/Usuario/vender_juegos_page.jsp">Vender juegos</a></li>
+            <li><a href="<%=request.getContextPath()%>/Usuario/mis_ventas_page.jsp">Tus ventas</a></li>
+            <li><a href="<%=request.getContextPath()%>/Usuario/contact.jsp">Contáctanos</a></li>
+            <li><a href="<%=request.getContextPath()%>/Usuario/login_page.jsp">Inicia sesión</a></li>
+            <li><a href="<%=request.getContextPath()%>/Usuario/perfil_user_page.jsp">Perfil<img src="assets/images/profile-header.jpg" style="border-radius: 50%;
                 margin-left: 5px; max-width: 30%;" alt=""></a></li>
           </ul>
           <a class='menu-trigger'>
@@ -107,7 +107,7 @@ https://templatemo.com/tm-589-lugx-gaming
       </div>
       <div class="col-lg-4 offset-lg-2">
         <div class="right-image">
-          <img src="assets/images/banner-image.jpg" alt="">
+          <img src="<%=request.getContextPath()%>/Usuario/assets/images/banner-image.jpg" alt="">
           <span class="price">$22</span>
           <span class="offer">-90%</span>
         </div>
@@ -132,81 +132,88 @@ https://templatemo.com/tm-589-lugx-gaming
 
       <div class="col-lg-3">
       </div>
-
+      <% for (Juegos j :listaJuegos) { %>
       <div class="col-lg-3 col-md-6">
+
         <div class="item">
           <div class="thumb">
-            <a href="#"><img src="assets/images/trending-01.jpg" alt=""></a>
+            <a href="#"><img src="<%=request.getContextPath()%>/Usuario/assets/images/trending-01.jpg" alt=""></a>
           </div>
           <div class="down-content">
-            <span class="category">Action</span>
-            <h5 class="card-title">The last of us 2</h5>
-            <p class="card-text"><em>Pendiente para recoger</em></p>
-            <button role="button" class="btn btn-primary ">Más detalles</button>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-lg-3 col-md-6">
-        <div class="item">
-          <div class="thumb">
-            <a href="#"><img src="assets/images/trending-02.jpg" alt=""></a>
-          </div>
-          <div class="down-content">
-            <span class="category">Action</span>
-            <h5 class="card-title">The last of us 2</h5>
-            <p class="card-text"><em>Pendiente para recoger</em></p>
-            <button role="button" class="btn btn-primary ">Más detalles</button>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-lg-3 col-md-6">
-        <div class="item">
-          <div class="thumb">
-            <a href="#"><img src="assets/images/trending-03.jpg" alt=""></a>
-          </div>
-          <div class="down-content">
-            <span class="category">Action</span>
-            <h5 class="card-title">The last of us 2</h5>
-            <p class="card-text"><em>Pendiente para recibir</em></p>
-            <button role="button" class="btn btn-primary ">Más detalles</button>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-lg-3 col-md-6">
-        <div class="item">
-          <div class="thumb">
-            <a href="#"><img src="assets/images/trending-04.jpg" alt=""></a>
-          </div>
-          <div class="down-content">
-            <span class="category">Action</span>
-            <h5 class="card-title">The last of us 2</h5>
-            <p class="card-text"><em>Pendiente para recibir</em></p>
-            <button role="button" class="btn btn-primary ">Más detalles</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6">
-        <div class="item">
-          <div class="thumb">
-            <a href="#"><img src="assets/images/trending-01.jpg" alt=""></a>
-          </div>
-          <% for (Juegos j :listaJuegos) { %>
-          <div class="down-content">
-            <span class="category"><%=j.getGenero() %> </span>
+            <h5 class="card-title"></h5>
+            <span class="category"><%=j.getGenero()%></span>
             <h5 class="card-title"><%=j.getNombre() %></h5>
+            <p class="card-text"><em><%=j.getEstado_activo()%></em></p>
+            <button role="button" class="btn btn-primary ">Más detalles</button>
+          </div>
+        </div>
+      </div>
+        <% } %>
+
+
+  <!--
+      <div class="col-lg-3 col-md-6">
+        <div class="item">
+          <div class="thumb">
+            <a href="#"><img src="<%=request.getContextPath()%>/Usuario/assets/images/trending-02.jpg" alt=""></a>
+          </div>
+          <div class="down-content">
+            <span class="category">Action</span>
+            <h5 class="card-title">The last of us 2</h5>
+            <p class="card-text"><em>Pendiente para recoger</em></p>
+            <button role="button" class="btn btn-primary ">Más detalles</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-3 col-md-6">
+        <div class="item">
+          <div class="thumb">
+            <a href="#"><img src="<%=request.getContextPath()%>/Usuario/assets/images/trending-03.jpg" alt=""></a>
+          </div>
+          <div class="down-content">
+            <span class="category">Action</span>
+            <h5 class="card-title">The last of us 2</h5>
             <p class="card-text"><em>Pendiente para recibir</em></p>
             <button role="button" class="btn btn-primary ">Más detalles</button>
           </div>
         </div>
       </div>
-      <% } %>
+
+
+      <div class="col-lg-3 col-md-6">
+        <div class="item">
+          <div class="thumb">
+            <a href="#"><img src="<%=request.getContextPath()%>/Usuario/assets/images/trending-04.jpg" alt=""></a>
+          </div>
+          <div class="down-content">
+            <span class="category">Action</span>
+            <h5 class="card-title">The last of us 2</h5>
+            <p class="card-text"><em>Pendiente para recibir</em></p>
+            <button role="button" class="btn btn-primary ">Más detalles</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+
+        <div class="item">
+          <div class="thumb">
+            <a href="#"><img src="<%=request.getContextPath()%>/Usuario/assets/images/trending-01.jpg" alt=""></a>
+            </div>
+
+            <div class="down-content">
+              <span class="category">Hola </span>
+              <h5 class="card-title">aaa</h5>
+              <p class="card-text"><em>Pendiente para recibir</em></p>
+              <button role="button" class="btn btn-primary ">Más detalles</button>
+            </div>
+
+            </div>
+          </div> -->
+
+
       <!--
            <div class="col-lg-3 col-md-6">
              <div class="item">
@@ -359,7 +366,7 @@ https://templatemo.com/tm-589-lugx-gaming
              <div class="item">
                <h4>Action</h4>
                <div class="thumb">
-                 <a href="#"><img src="assets/images/categories-01.jpg" alt=""></a>
+                 <a href="#"><img src="<%=request.getContextPath()%>/Usuario/assets/images/categories-01.jpg" alt=""></a>
                </div>
              </div>
            </div>
@@ -367,7 +374,7 @@ https://templatemo.com/tm-589-lugx-gaming
              <div class="item">
                <h4>Action</h4>
                <div class="thumb">
-                 <a href="#"><img src="assets/images/categories-05.jpg" alt=""></a>
+                 <a href="#"><img src="<%=request.getContextPath()%>/Usuario/assets/images/categories-05.jpg" alt=""></a>
                </div>
              </div>
            </div>
@@ -375,7 +382,7 @@ https://templatemo.com/tm-589-lugx-gaming
              <div class="item">
                <h4>Action</h4>
                <div class="thumb">
-                 <a href="#"><img src="assets/images/categories-03.jpg" alt=""></a>
+                 <a href="#"><img src="<%=request.getContextPath()%>/Usuario/assets/images/categories-03.jpg" alt=""></a>
                </div>
              </div>
            </div>
@@ -383,7 +390,7 @@ https://templatemo.com/tm-589-lugx-gaming
              <div class="item">
                <h4>Action</h4>
                <div class="thumb">
-                 <a href="#"><img src="assets/images/categories-04.jpg" alt=""></a>
+                 <a href="#"><img src="<%=request.getContextPath()%>/Usuario/assets/images/categories-04.jpg" alt=""></a>
                </div>
              </div>
            </div>
@@ -391,7 +398,7 @@ https://templatemo.com/tm-589-lugx-gaming
              <div class="item">
                <h4>Action</h4>
                <div class="thumb">
-                 <a href="#"><img src="assets/images/categories-05.jpg" alt=""></a>
+                 <a href="#"><img src="<%=request.getContextPath()%>/Usuario/assets/images/categories-05.jpg" alt=""></a>
                </div>
              </div>
            </div>
@@ -413,7 +420,7 @@ https://templatemo.com/tm-589-lugx-gaming
                    <p>No dejes pasar la oportidad. Tenemos las mejores ofertas todos los meses en los mejores juegos y
                      sagas.</p>
                    <div class="main-button">
-                     <a href="listajuego.html">Compra ahora</a>
+                     <a href="<%=request.getContextPath()%>/Usuario/listajuego.html">Compra ahora</a>
                    </div>
                  </div>
                </div>
@@ -453,13 +460,13 @@ https://templatemo.com/tm-589-lugx-gaming
 
      <!-- Scripts -->
 <!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/js/isotope.min.js"></script>
-<script src="assets/js/owl-carousel.js"></script>
-<script src="assets/js/counter.js"></script>
-<script src="assets/js/custom.js"></script>
-
+<script src="<%=request.getContextPath()%>/Usuario/vendor/jquery/jquery.min.js"></script>
+<script src="<%=request.getContextPath()%>/Usuario/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="<%=request.getContextPath()%>/Usuario/assets/js/isotope.min.js"></script>
+<script src="<%=request.getContextPath()%>/Usuario/assets/js/owl-carousel.js"></script>
+<script src="<%=request.getContextPath()%>/Usuario/assets/js/counter.js"></script>
+<script src="<%=request.getContextPath()%>/Usuario/assets/js/custom.js"></script>
+</div>
 </body>
 
 </html>
