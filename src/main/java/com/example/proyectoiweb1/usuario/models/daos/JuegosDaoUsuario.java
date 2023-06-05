@@ -70,5 +70,38 @@ public class JuegosDaoUsuario {
         return  listaMasJugados;
 
     }
+    public Juegos listar_juego_descripcion(String id) {
+        Juegos juego = null;
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        String sql = "select * from juegos where idJuegos = ?";
+        String url = "jdbc:mysql://localhost:3306/hr";
+        try (Connection connection = DriverManager.getConnection(url, "root", "root");
+             PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+            preparedStatement.setString(1, id);
+
+            try (ResultSet rs = preparedStatement.executeQuery()) {
+                if (rs.next()) {
+                    juego  = new Juegos();
+                    juego.setDescripcion(rs.getString("descripcion"));
+                    juego.setNombre(rs.getString("nombre"));
+                    juego.setPrecio_unidad(rs.getString("precio_unidad"));
+                    juego.setGenero(rs.getString("genero"));
+                    juego.setCantidad_stock(rs.getString("cantidad_stock"));
+                }
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return juego;
+    }
 
 }
