@@ -1,3 +1,11 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="com.example.proyectoiweb1.usuario.models.beans.Juegos" %>
+<%@ page import="com.example.proyectoiweb1.usuario.models.daos.JuegosDaoUsuario" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<% ArrayList<Juegos> listaJuegos = (ArrayList<Juegos>) request.getAttribute("listaJuegos"); %>
+<% ArrayList<Juegos> listaMasJugados = (ArrayList<Juegos>) request.getAttribute("listaMasJugados"); %>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -174,6 +182,7 @@ https://templatemo.com/tm-589-lugx-gaming
             <a href="tendencia_juegos_page.jsp">Ver todos</a>
           </div>
         </div>
+        <% for (Juegos j : listaJuegos) { %>
 
         <div class="col-lg-3 col-md-6">
           <div class="item">
@@ -182,261 +191,264 @@ https://templatemo.com/tm-589-lugx-gaming
               <span class="price"><em>$28</em>$20</span>
             </div>
             <div class="down-content">
-              <span class="category">Action</span>
-              <h5>Assasin Creed</h5>
+              <span class="category"><%=j.getGenero()%></span>
+              <h5><%=j.getNombre()%></h5>
               <a href="metodo_compra_page.jsp"><i class="fa fa-shopping-bag"></i></a>
-              <button onclick="window.location.href = 'informacion_oferta_page.html'" role="button" class="btn btn-primary" href="listajuego.html">Más detalles</button>
+              <button onclick="window.location.href = 'informacion_oferta_page.html'" role="button" class="btn btn-primary" href="<%=request.getContextPath()%>/ServletPrincipalUser?a=mostrarDetalles&id=<%=j.getIdJuegos()%>">Más detalles</button>
             </div>
           </div>
         </div>
+        <%}%>
+        <!--
+                 <div class="item">
+                   <div class="thumb">
+                     <a href="informacion_juego_page.jsp"><img src="assets/images/trending-02.jpg" alt=""></a>
+                     <span class="price">$44</span>
+                   </div>
+                   <div class="down-content">
+                     <span class="category">Action</span>
+                     <h5>Assasin Creed</h5>
+                     <a href="metodo_compra_page.jsp"><i class="fa fa-shopping-bag"></i></a>
+                     <button onclick="window.location.href = 'informacion_juego_page.html'" role="button" class="btn btn-primary" >Más detalles</button>
+                   </div>
+                 </div>
+               </div>
 
-        <div class="col-lg-3 col-md-6">
-          <div class="item">
-            <div class="thumb">
-              <a href="informacion_juego_page.jsp"><img src="assets/images/trending-02.jpg" alt=""></a>
-              <span class="price">$44</span>
-            </div>
-            <div class="down-content">
-              <span class="category">Action</span>
-              <h5>Assasin Creed</h5>
-              <a href="metodo_compra_page.jsp"><i class="fa fa-shopping-bag"></i></a>
-              <button onclick="window.location.href = 'informacion_juego_page.html'" role="button" class="btn btn-primary" >Más detalles</button>
-            </div>
-          </div>
-        </div>
+               <div class="col-lg-3 col-md-6">
+                 <div class="item">
+                   <div class="thumb">
+                     <a href="informacion_oferta_page.jsp"><img src="assets/images/trending-03.jpg" alt=""></a>
+                     <span class="price"><em>$64</em>$44</span>
+                   </div>
+                   <div class="down-content">
+                     <span class="category">Action</span>
+                     <h5>Assasin Creed</h5>
+                     <a href="metodo_compra_page.jsp"><i class="fa fa-shopping-bag"></i></a>
+                     <button onclick="window.location.href = 'informacion_oferta_page.html'" role="button" class="btn btn-primary">Más detalles</button>
+                   </div>
+                 </div>
+               </div>
 
-        <div class="col-lg-3 col-md-6">
-          <div class="item">
-            <div class="thumb">
-              <a href="informacion_oferta_page.jsp"><img src="assets/images/trending-03.jpg" alt=""></a>
-              <span class="price"><em>$64</em>$44</span>
-            </div>
-            <div class="down-content">
-              <span class="category">Action</span>
-              <h5>Assasin Creed</h5>
-              <a href="metodo_compra_page.jsp"><i class="fa fa-shopping-bag"></i></a>
-              <button onclick="window.location.href = 'informacion_oferta_page.html'" role="button" class="btn btn-primary">Más detalles</button>
-            </div>
-          </div>
-        </div>
+               <div class="col-lg-3 col-md-6">
+                 <div class="item">
+                   <div class="thumb">
+                     <a href="informacion_juego_page.jsp"><img src="assets/images/trending-04.jpg" alt=""></a>
+                     <span class="price">$32</span>
+                   </div>
+                   <div class="down-content">
+                     <span class="category">Action</span>
+                     <h5>Assasin Creed</h5>
+                     <a href="metodo_compra_page.jsp"><i class="fa fa-shopping-bag"></i></a>
+                     <button onclick="window.location.href = 'informacion_juego_page.html'" role="button" class="btn btn-primary ">Más detalles</button>
+                   </div>
+                 </div>
+               </div>
+  -->
+             </div>
+           </div>
+         </div>
 
-        <div class="col-lg-3 col-md-6">
-          <div class="item">
-            <div class="thumb">
-              <a href="informacion_juego_page.jsp"><img src="assets/images/trending-04.jpg" alt=""></a>
-              <span class="price">$32</span>
-            </div>
-            <div class="down-content">
-              <span class="category">Action</span>
-              <h5>Assasin Creed</h5>
-              <a href="metodo_compra_page.jsp"><i class="fa fa-shopping-bag"></i></a>
-              <button onclick="window.location.href = 'informacion_juego_page.html'" role="button" class="btn btn-primary ">Más detalles</button>
-            </div>
-          </div>
-        </div>
+         <div class="section most-played">
+           <div class="container">
+             <div class="row">
+               <div class="col-lg-6">
+                 <div class="section-heading">
+                   <h6>TOP GAMES</h6>
+                   <h2>Más jugados</h2>
+                 </div>
+               </div>
 
-      </div>
-    </div>
-  </div>
-
-  <div class="section most-played">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="section-heading">
-            <h6>TOP GAMES</h6>
-            <h2>Más jugados</h2>
-          </div>
-        </div>
-
-        <div class="col-lg-6">
-          <div class="main-button">
-            <a href="listajuego.html">Ver todos</a>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-6 col-sm-6">
-          <div class="item">
-            <div class="thumb">
-              <a href="#"><img src="assets/images/top-game-01.jpg" alt=""></a>
-            </div>
-            <div class="down-content">
-              <span class="category">Adventure</span>
-              <h4>Assasin Creed</h4>
-              <a href="#">Explorar</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-6 col-sm-6">
-          <div class="item">
-            <div class="thumb">
-              <a href="#"><img src="assets/images/top-game-02.jpg" alt=""></a>
-            </div>
-            <div class="down-content">
-              <span class="category">Adventure</span>
-              <h4>Assasin Creed</h4>
-              <a href="#">Explorar</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-6 col-sm-6">
-          <div class="item">
-            <div class="thumb">
-              <a href="#"><img src="assets/images/top-game-03.jpg" alt=""></a>
-            </div>
-            <div class="down-content">
-              <span class="category">Adventure</span>
-              <h4>Assasin Creed</h4>
-              <a href="#">Explorar</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-6 col-sm-6">
-          <div class="item">
-            <div class="thumb">
-              <a href="#"><img src="assets/images/top-game-04.jpg" alt=""></a>
-            </div>
-            <div class="down-content">
-              <span class="category">Adventure</span>
-              <h4>Assasin Creed</h4>
-              <a href="#">Explorar</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-6 col-sm-6">
-          <div class="item">
-            <div class="thumb">
-              <a href="#"><img src="assets/images/top-game-05.jpg" alt=""></a>
-            </div>
-            <div class="down-content">
-              <span class="category">Adventure</span>
-              <h4>Assasin Creed</h4>
-              <a href="#">Explorar</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-6 col-sm-6">
-          <div class="item">
-            <div class="thumb">
-              <a href="#"><img src="assets/images/top-game-06.jpg" alt=""></a>
-            </div>
-            <div class="down-content">
-              <span class="category">Adventure</span>
-              <h4>Assasin Creed</h4>
-              <a href="#">Explorar</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section categories">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <div class="section-heading">
-            <h6>Categorías</h6>
-            <h2>Top Categorías</h2>
-          </div>
-        </div>
-        <div class="col-lg col-sm-6 col-xs-12">
-          <div class="item">
-            <h4>Action</h4>
-            <div class="thumb">
-              <a href="#"><img src="assets/images/categories-01.jpg" alt=""></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg col-sm-6 col-xs-12">
-          <div class="item">
-            <h4>Action</h4>
-            <div class="thumb">
-              <a href="#"><img src="assets/images/categories-05.jpg" alt=""></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg col-sm-6 col-xs-12">
-          <div class="item">
-            <h4>Action</h4>
-            <div class="thumb">
-              <a href="#"><img src="assets/images/categories-03.jpg" alt=""></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg col-sm-6 col-xs-12">
-          <div class="item">
-            <h4>Action</h4>
-            <div class="thumb">
-              <a href="#"><img src="assets/images/categories-04.jpg" alt=""></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg col-sm-6 col-xs-12">
-          <div class="item">
-            <h4>Action</h4>
-            <div class="thumb">
-              <a href="#"><img src="assets/images/categories-05.jpg" alt=""></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section cta">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-5">
-          <div class="shop">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="section-heading">
-                  <h6>Nosotros</h6>
-                  <h2>Compra y obtén los mejores <em>precios</em> para ti!</h2>
+               <div class="col-lg-6">
+                 <div class="main-button">
+                   <a href="listajuego.html">Ver todos</a>
+                 </div>
+               </div>
+               <% for (Juegos ju : listaMasJugados) { %>
+               <div class="col-lg-2 col-md-6 col-sm-6">
+                 <div class="item">
+                   <div class="thumb">
+                     <a href="#"><img src="assets/images/top-game-01.jpg" alt=""></a>
+                   </div>
+                   <div class="down-content">
+                     <span class="category"><%=ju.getGenero()%></span>
+                     <h4><%=ju.getNombre()%>/h4>
+                     <a href="#">Explorar</a>
+                   </div>
+                 </div>
+               </div>
+               <%}%>
+               <!-- <div class="col-lg-2 col-md-6 col-sm-6">
+                  <div class="item">
+                    <div class="thumb">
+                      <a href="#"><img src="assets/images/top-game-02.jpg" alt=""></a>
+                    </div>
+                    <div class="down-content">
+                      <span class="category">Adventure</span>
+                      <h4>Assasin Creed</h4>
+                      <a href="#">Explorar</a>
+                    </div>
+                  </div>
                 </div>
-                <p>No dejes pasar la oportidad. Tenemos las mejores ofertas todos los meses en los mejores juegos y
-                  sagas.</p>
-                <div class="main-button">
-                  <a href="listajuego.html">Compra ahora</a>
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                  <div class="item">
+                    <div class="thumb">
+                      <a href="#"><img src="assets/images/top-game-03.jpg" alt=""></a>
+                    </div>
+                    <div class="down-content">
+                      <span class="category">Adventure</span>
+                      <h4>Assasin Creed</h4>
+                      <a href="#">Explorar</a>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-5 offset-lg-2 align-self-end">
-          <div class="subscribe">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="section-heading">
-                  <h6>NEWSLETTER</h6>
-                  <h2>Obtén S/.50 de descuento<em> Suscríbete</em> al Newsletter!</h2>
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                  <div class="item">
+                    <div class="thumb">
+                      <a href="#"><img src="assets/images/top-game-04.jpg" alt=""></a>
+                    </div>
+                    <div class="down-content">
+                      <span class="category">Adventure</span>
+                      <h4>Assasin Creed</h4>
+                      <a href="#">Explorar</a>
+                    </div>
+                  </div>
                 </div>
-                <div class="search-input">
-                  <form id="subscribe" action="#">
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                      placeholder="Tu correo...">
-                    <button type="submit">Subscríbete ahora</button>
-                  </form>
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                  <div class="item">
+                    <div class="thumb">
+                      <a href="#"><img src="assets/images/top-game-05.jpg" alt=""></a>
+                    </div>
+                    <div class="down-content">
+                      <span class="category">Adventure</span>
+                      <h4>Assasin Creed</h4>
+                      <a href="#">Explorar</a>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                  <div class="item">
+                    <div class="thumb">
+                      <a href="#"><img src="assets/images/top-game-06.jpg" alt=""></a>
+                    </div>
+                    <div class="down-content">
+                      <span class="category">Adventure</span>
+                      <h4>Assasin Creed</h4>
+                      <a href="#">Explorar</a>
+                    </div>
+                  </div>
+                </div>
+                  -->
+             </div>
+           </div>
+         </div>
 
-  <footer>
-    <div class="container">
-      <div class="col-lg-12">
-        <p>Copyright © 2023 ERGO PROXY Gaming Company. Todos los derechos reservados. Diseñado para el cursos de
-          Ingeniería web PUCP.</p>
-      </div>
-    </div>
-  </footer>
+         <div class="section categories">
+           <div class="container">
+             <div class="row">
+               <div class="col-lg-12 text-center">
+                 <div class="section-heading">
+                   <h6>Categorías</h6>
+                   <h2>Top Categorías</h2>
+                 </div>
+               </div>
+               <div class="col-lg col-sm-6 col-xs-12">
+                 <div class="item">
+                   <h4>Action</h4>
+                   <div class="thumb">
+                     <a href="#"><img src="assets/images/categories-01.jpg" alt=""></a>
+                   </div>
+                 </div>
+               </div>
+               <div class="col-lg col-sm-6 col-xs-12">
+                 <div class="item">
+                   <h4>Action</h4>
+                   <div class="thumb">
+                     <a href="#"><img src="assets/images/categories-05.jpg" alt=""></a>
+                   </div>
+                 </div>
+               </div>
+               <div class="col-lg col-sm-6 col-xs-12">
+                 <div class="item">
+                   <h4>Action</h4>
+                   <div class="thumb">
+                     <a href="#"><img src="assets/images/categories-03.jpg" alt=""></a>
+                   </div>
+                 </div>
+               </div>
+               <div class="col-lg col-sm-6 col-xs-12">
+                 <div class="item">
+                   <h4>Action</h4>
+                   <div class="thumb">
+                     <a href="#"><img src="assets/images/categories-04.jpg" alt=""></a>
+                   </div>
+                 </div>
+               </div>
+               <div class="col-lg col-sm-6 col-xs-12">
+                 <div class="item">
+                   <h4>Action</h4>
+                   <div class="thumb">
+                     <a href="#"><img src="assets/images/categories-05.jpg" alt=""></a>
+                   </div>
+                 </div>
+               </div>
 
-  <!-- Scripts -->
+             </div>
+           </div>
+         </div>
+
+         <div class="section cta">
+           <div class="container">
+             <div class="row">
+               <div class="col-lg-5">
+                 <div class="shop">
+                   <div class="row">
+                     <div class="col-lg-12">
+                       <div class="section-heading">
+                         <h6>Nosotros</h6>
+                         <h2>Compra y obtén los mejores <em>precios</em> para ti!</h2>
+                       </div>
+                       <p>No dejes pasar la oportidad. Tenemos las mejores ofertas todos los meses en los mejores juegos y
+                         sagas.</p>
+                       <div class="main-button">
+                         <a href="listajuego.html">Compra ahora</a>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+               <div class="col-lg-5 offset-lg-2 align-self-end">
+                 <div class="subscribe">
+                   <div class="row">
+                     <div class="col-lg-12">
+                       <div class="section-heading">
+                         <h6>NEWSLETTER</h6>
+                         <h2>Obtén S/.50 de descuento<em> Suscríbete</em> al Newsletter!</h2>
+                       </div>
+                       <div class="search-input">
+                         <form id="subscribe" action="#">
+                           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                             placeholder="Tu correo...">
+                           <button type="submit">Subscríbete ahora</button>
+                         </form>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+
+         <footer>
+           <div class="container">
+             <div class="col-lg-12">
+               <p>Copyright © 2023 ERGO PROXY Gaming Company. Todos los derechos reservados. Diseñado para el cursos de
+                 Ingeniería web PUCP.</p>
+             </div>
+           </div>
+         </footer>
+
+         <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>

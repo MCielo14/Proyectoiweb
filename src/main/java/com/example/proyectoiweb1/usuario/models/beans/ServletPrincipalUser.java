@@ -11,10 +11,23 @@ import java.io.IOException;
 public class ServletPrincipalUser extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         JuegosDaoUsuario juegosDaoUsuario = new JuegosDaoUsuario();
-        String id = request.getParameter("id");
-        request.setAttribute("juego", juegosDaoUsuario.listar_juego_descripcion(id));
-        request.getRequestDispatcher("Usuario/principal_user.jsp").forward(request, response);
+        String action = request.getParameter("a") == null ? "listar" : request.getParameter("a");
+        switch (action){
+            case "listar" :
+                request.setAttribute("listarJuegos", juegosDaoUsuario.listarJuegos());
+                request.setAttribute("listarMasJugados",juegosDaoUsuario.listarMasJugados());
+                request.getRequestDispatcher("jobs/principal_user.jsp").forward(request, response);
+                break;
+            case "mostrarDetalles" :
+                String id = request.getParameter("id");
+                request.setAttribute("juego", juegosDaoUsuario.listar_juego_descripcion(id));
+                request.getRequestDispatcher("Usuario/informacion_oferta_page.jsp").forward(request, response);
+                break;
+
+        }
+
     }
 
     @Override
