@@ -1,3 +1,10 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="com.example.proyectoiweb1.usuario.models.beans.Juegos" %>
+<%@ page import="com.example.proyectoiweb1.usuario.models.daos.JuegosDaoUsuario" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<% ArrayList<Juegos> listaJuegos = (ArrayList<Juegos>) request.getAttribute("listaJuegos"); %>
+<% ArrayList<Juegos> listaMasJugados = (ArrayList<Juegos>) request.getAttribute("listaMasJugados"); %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -118,7 +125,7 @@ https://templatemo.com/tm-589-lugx-gaming
 
       <div class="col-lg-9">
         <div class="section-heading">
-          <h6>Tendencia</h6>
+          <h6>Juegos</h6>
           <h2>Todos los juegos disponibles a comprar:</h2>
           <hr size="2px" color="gray"  style="height: 1px;"/>
         </div>
@@ -126,7 +133,7 @@ https://templatemo.com/tm-589-lugx-gaming
 
       <div class="col-lg-3">
       </div>
-
+      <% for (Juegos j : listaJuegos) { %>
       <div class="col-lg-3 col-md-6">
         <div class="item">
           <div class="thumb">
@@ -134,15 +141,17 @@ https://templatemo.com/tm-589-lugx-gaming
             <span class="price"><em>$28</em>$20</span>
           </div>
           <div class="down-content">
-            <span class="category">Action</span>
-            <h5>Assasin Creed</h5>
-            <p class="card-text"><em>Un juego buenísimo!</em></p>
+            <span class="category"><%=j.getGenero()%></span>
+            <h5><%=j.getNombre()%></h5>
+            <p class="card-text"><em><%=j.getRating()%></em></p>
             <a href="<%=request.getContextPath()%>/Usuario/metodo_compra_page.jsp"><i class="fa fa-shopping-bag"></i></a>
-            <button onclick="window.location.href = 'informacion_oferta_page.html'" role="button" class="btn btn-primary" href="listajuego.html">Más detalles</button>
+            <button onclick="window.location.href = '<%=request.getContextPath()%>/Usuario/informacion_oferta_page.jsp'" role="button" class="btn btn-primary" href="listajuego.html">Más detalles</button>
           </div>
         </div>
       </div>
+      <%}%>
 
+      <!--
       <div class="col-lg-3 col-md-6">
         <div class="item">
           <div class="thumb">
@@ -254,7 +263,7 @@ https://templatemo.com/tm-589-lugx-gaming
           </div>
         </div>
       </div>
-
+      -->
     </div>
   </div>
 </div>
@@ -270,21 +279,25 @@ https://templatemo.com/tm-589-lugx-gaming
       </div>
       <div class="col-lg-6">
         <div class="main-button">
-          <a href="tendencia_juegos_page.jsp">Ver todos</a>
+          <a href="<%=request.getContextPath()%>/Usuario/tendencia_juegos_page.jsp">Ver todos</a>
         </div>
       </div>
+
+      <% for (Juegos j : listaMasJugados) { %>
       <div class="col-lg-2 col-md-6 col-sm-6">
         <div class="item">
           <div class="thumb">
-            <a href="#"><img src="assets/images/top-game-01.jpg" alt=""></a>
+            <a href="#"><img src="<%=request.getContextPath()%>/Usuario/assets/images/top-game-01.jpg" alt=""></a>
           </div>
           <div class="down-content">
-            <span class="category">Adventure</span>
-            <h4>Assasin Creed</h4>
+            <span class="category"><%=j.getGenero()%></span>
+            <h4><%=j.getNombre()%></h4>
             <a href="#">Explore</a>
           </div>
         </div>
       </div>
+      <%}%>
+      <!--
       <div class="col-lg-2 col-md-6 col-sm-6">
         <div class="item">
           <div class="thumb">
@@ -345,6 +358,7 @@ https://templatemo.com/tm-589-lugx-gaming
           </div>
         </div>
       </div>
+      -->
     </div>
   </div>
 </div>
@@ -362,7 +376,7 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="item">
           <h4>Action</h4>
           <div class="thumb">
-            <a href="#"><img src="assets/images/categories-01.jpg" alt=""></a>
+            <a href="#"><img src="<%=request.getContextPath()%>/Usuario/assets/images/categories-01.jpg" alt=""></a>
           </div>
         </div>
       </div>
@@ -370,7 +384,7 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="item">
           <h4>Action</h4>
           <div class="thumb">
-            <a href="#"><img src="assets/images/categories-05.jpg" alt=""></a>
+            <a href="#"><img src="<%=request.getContextPath()%>/Usuario/assets/images/categories-05.jpg" alt=""></a>
           </div>
         </div>
       </div>
@@ -378,7 +392,7 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="item">
           <h4>Action</h4>
           <div class="thumb">
-            <a href="#"><img src="assets/images/categories-03.jpg" alt=""></a>
+            <a href="#"><img src="<%=request.getContextPath()%>/Usuario/assets/images/categories-03.jpg" alt=""></a>
           </div>
         </div>
       </div>
@@ -386,7 +400,7 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="item">
           <h4>Action</h4>
           <div class="thumb">
-            <a href="#"><img src="assets/images/categories-04.jpg" alt=""></a>
+            <a href="#"><img src="<%=request.getContextPath()%>/Usuario/assets/images/categories-04.jpg" alt=""></a>
           </div>
         </div>
       </div>
@@ -394,7 +408,7 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="item">
           <h4>Action</h4>
           <div class="thumb">
-            <a href="#"><img src="assets/images/categories-05.jpg" alt=""></a>
+            <a href="#"><img src="<%=request.getContextPath()%>/Usuario/assets/images/categories-05.jpg" alt=""></a>
           </div>
         </div>
       </div>
@@ -416,7 +430,7 @@ https://templatemo.com/tm-589-lugx-gaming
               <p>No dejes pasar la oportidad. Tenemos las mejores ofertas todos los meses en los mejores juegos y
                 sagas.</p>
               <div class="main-button">
-                <a href="listajuego.html">Compra ahora</a>
+                <a href="<%=request.getContextPath()%>/Usuario/listajuego.html">Compra ahora</a>
               </div>
             </div>
           </div>
@@ -456,12 +470,12 @@ https://templatemo.com/tm-589-lugx-gaming
 
 <!-- Scripts -->
 <!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/js/isotope.min.js"></script>
-<script src="assets/js/owl-carousel.js"></script>
-<script src="assets/js/counter.js"></script>
-<script src="assets/js/custom.js"></script>
+<script src="<%=request.getContextPath()%>/Usuario/vendor/jquery/jquery.min.js"></script>
+<script src="<%=request.getContextPath()%>/Usuario/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="<%=request.getContextPath()%>/Usuario/assets/js/isotope.min.js"></script>
+<script src="<%=request.getContextPath()%>/Usuario/assets/js/owl-carousel.js"></script>
+<script src="<%=request.getContextPath()%>/Usuario/assets/js/counter.js"></script>
+<script src="<%=request.getContextPath()%>/Usuario/assets/js/custom.js"></script>
 
 </body>
 

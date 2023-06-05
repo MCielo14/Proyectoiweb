@@ -27,6 +27,7 @@ public class JuegosDaoUsuario {
                 juego.setNombre(resultSet.getString(2));
                 //juego.setDescripcion(resultSet.getString(3));
                 juego.setRating(resultSet.getString(4));
+                juego.setGenero(resultSet.getString(5));
                 juego.setPrecio_unidad(resultSet.getString("precio_unidad"));
                 listaJuegos.add(juego);
             }
