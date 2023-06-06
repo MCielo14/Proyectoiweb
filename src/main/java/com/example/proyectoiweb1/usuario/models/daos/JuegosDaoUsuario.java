@@ -35,9 +35,6 @@ public class JuegosDaoUsuario {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
-
-
         return  listaJuegos;
 
     }
@@ -49,7 +46,7 @@ public class JuegosDaoUsuario {
             e.printStackTrace();
         }
 
-        String sql = "select * from juegos where rating>4.5";
+        String sql = "select * from juegos where rating>4.5 limit 6";
         String url = "jdbc:mysql://localhost:3306/mydb";
 
         try (Connection connection = DriverManager.getConnection(url, "root", "root");
@@ -80,7 +77,7 @@ public class JuegosDaoUsuario {
         }
 
         String sql = "select * from juegos where idJuegos = ?";
-        String url = "jdbc:mysql://localhost:3306/hr";
+        String url = "jdbc:mysql://localhost:3306/mydb";
         try (Connection connection = DriverManager.getConnection(url, "root", "root");
              PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
 

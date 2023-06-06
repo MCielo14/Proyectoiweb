@@ -67,10 +67,10 @@ https://templatemo.com/tm-589-lugx-gaming
           <!-- ***** Logo End ***** -->
           <!-- ***** Menu Start ***** -->
           <ul class="nav">
-            <li><a href="<%=request.getContextPath()%>/Usuario/tendencia_juegos_page.jsp" class="active">Comprar juegos</a></li>
+            <li><a href="<%=request.getContextPath()%>/ServletTendencias" class="active">Comprar juegos</a></li>
             <li><a href="<%=request.getContextPath()%>/Usuario/compras_juegos_page.jsp">Mis juegos</a></li>
             <li><a href="<%=request.getContextPath()%>/Usuario/vender_juegos_page.jsp">Vender juegos</a></li>
-            <li><a href="<%=request.getContextPath()%>/Usuario/mis_ventas_page.jsp">Tus ventas</a></li>
+            <li><a href="<%=request.getContextPath()%>/ServletJuegoPosteado">Tus ventas</a></li>
             <li><a href="<%=request.getContextPath()%>/Usuario/contact.jsp">Contáctanos</a></li>
             <li><a href="<%=request.getContextPath()%>/Usuario/login_page.jsp">Inicia sesión</a></li>
             <li><a href="<%=request.getContextPath()%>/Usuario/perfil_user_page.jsp">Perfil<img src="<%=request.getContextPath()%>/Usuario/assets/images/profile-header.jpg" style="border-radius: 50%;

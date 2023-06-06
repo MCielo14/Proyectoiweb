@@ -1,4 +1,4 @@
-package com.example.proyectoiweb1.usuario.models.beans;
+package com.example.proyectoiweb1.usuario.controllers;
 
 import com.example.proyectoiweb1.usuario.models.daos.JuegosDaoUsuario;
 import jakarta.servlet.*;
@@ -18,14 +18,13 @@ public class ServletPrincipalUser extends HttpServlet {
             case "listar" :
                 request.setAttribute("listarJuegos", juegosDaoUsuario.listarJuegos());
                 request.setAttribute("listarMasJugados",juegosDaoUsuario.listarMasJugados());
-                request.getRequestDispatcher("jobs/principal_user.jsp").forward(request, response);
+                request.getRequestDispatcher("Usuario/principal_user.jsp").forward(request, response);
                 break;
             case "mostrarDetalles" :
                 String id = request.getParameter("id");
                 request.setAttribute("juego", juegosDaoUsuario.listar_juego_descripcion(id));
                 request.getRequestDispatcher("Usuario/informacion_oferta_page.jsp").forward(request, response);
                 break;
-
         }
 
     }

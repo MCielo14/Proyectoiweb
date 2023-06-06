@@ -13,8 +13,8 @@ public class JuegoPosteadoUsuario {
     private float precio_venta_usuario;
     private float precio_compra_administrador;
     private boolean mostrar_posteo_usuario;
-    String motivo_rechazo;
-    int estado_solicitud;
+    private String motivo_rechazo;
+    private int estado_solicitud;
 
 
     public int getId_publicacion_usuario() {
@@ -111,5 +111,21 @@ public class JuegoPosteadoUsuario {
 
     public void setMostrar_posteo_usuario(boolean mostrar_posteo_usuario) {
         this.mostrar_posteo_usuario = mostrar_posteo_usuario;
+    }
+
+    public String getMotivo_rechazo() {
+        return motivo_rechazo;
+    }
+
+    public void setMotivo_rechazo(String motivo_rechazo) {
+        this.motivo_rechazo = motivo_rechazo;
+    }
+
+    public int getEstado_solicitud() {
+        return estado_solicitud;
+    }
+
+    public void setEstado_solicitud(int estado_solicitud) {
+        this.estado_solicitud = estado_solicitud;
     }
 }
