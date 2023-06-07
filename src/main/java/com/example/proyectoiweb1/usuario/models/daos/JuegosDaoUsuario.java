@@ -14,7 +14,7 @@ public class JuegosDaoUsuario {
             e.printStackTrace();
         }
 
-        String sql = "select * from juegos limit 12";
+        String sql = "select * from juegos";
         String url = "jdbc:mysql://localhost:3306/mydb";
 
         try (Connection connection = DriverManager.getConnection(url, "root", "root");
@@ -26,9 +26,9 @@ public class JuegosDaoUsuario {
                 juego.setIdJuegos(resultSet.getInt(1));
                 juego.setNombre(resultSet.getString(2));
                 //juego.setDescripcion(resultSet.getString(3));
-                juego.setRating(resultSet.getString(4));
+                juego.setRating(resultSet.getFloat(4));
                 juego.setGenero(resultSet.getString(5));
-                juego.setPrecio_unidad(resultSet.getString("precio_unidad"));
+                juego.setPrecio_unidad(resultSet.getFloat("precio_unidad"));
                 listaJuegos.add(juego);
             }
 
@@ -88,9 +88,9 @@ public class JuegosDaoUsuario {
                     juego  = new Juegos();
                     juego.setDescripcion(rs.getString("descripcion"));
                     juego.setNombre(rs.getString("nombre"));
-                    juego.setPrecio_unidad(rs.getString("precio_unidad"));
+                    juego.setPrecio_unidad(rs.getFloat("precio_unidad"));
                     juego.setGenero(rs.getString("genero"));
-                    juego.setCantidad_stock(rs.getString("cantidad_stock"));
+                    juego.setCantidad_stock(rs.getInt("cantidad_stock"));
                 }
             }
 
@@ -99,6 +99,70 @@ public class JuegosDaoUsuario {
         }
 
         return juego;
+    }
+    public void guardar(Juegos juegos) {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        String url = "jdbc:mysql://localhost:3306/mydb";
+        String sql = "INSERT INTO juegos (idJuegos,nombre,descripcion,rating,genero,imagen,consola,precio_unidad,cantidad_stock,estad_activo) VALUES (?,?,?,?,?)";
+        try (Connection connection = DriverManager.getConnection(url, "root", "root");
+             PreparedStatement pstmt = connection.prepareStatement(sql)) {
+
+            pstmt.setInt(1, juegos.getIdJuegos());
+            pstmt.setString(2, juegos.getNombre());
+            pstmt.setString(3, juegos.getDescripcion());
+            pstmt.setFloat(4,juegos.getRating());
+            pstmt.setString(5, juegos.getGenero());
+            pstmt.setString(6, juegos.getImagen());
+            pstmt.setString(7, juegos.getConsola());
+            pstmt.setFloat(8, juegos.getPrecio_unidad());
+            pstmt.setInt(9,juegos.getCantidad_stock());
+            pstmt.setBoolean(10,juegos.getEstado_activo());
+            pstmt.executeUpdate();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+    public static ArrayList<Juegos> buscarPorJuego(String name) {
+        ArrayList<Juegos> listabusqueda = new ArrayList<>();
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        String sql = "SELECT * FROM mydb.juegos where nombre like ?";
+        String url = "jdbc:mysql://localhost:3306/mydb";
+        try (Connection connection = DriverManager.getConnection(url, "root", "root");
+             PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+            preparedStatement.setString(1,  name + "%");
+
+            try (ResultSet rs = preparedStatement.executeQuery()) {
+                while (rs.next()) {
+                    Juegos juego = new Juegos();
+                    juego.setIdJuegos(rs.getInt(1));
+                    juego.setNombre(rs.getString(2));
+                    juego.setRating(rs.getFloat(4));
+                    juego.setGenero(rs.getString(5));
+
+                    listabusqueda.add(juego);
+                }
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return listabusqueda;
     }
 
 }

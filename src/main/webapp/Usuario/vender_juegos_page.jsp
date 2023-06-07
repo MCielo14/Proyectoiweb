@@ -1,3 +1,11 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="com.example.proyectoiweb1.usuario.models.beans.Juegos" %>
+<%@ page import="com.example.proyectoiweb1.usuario.models.daos.JuegosDaoUsuario" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<% ArrayList<Juegos> listarJuegos = (ArrayList<Juegos>) request.getAttribute("listarJuegos"); %>
+<% ArrayList<Juegos> listarMasJugados = (ArrayList<Juegos>) request.getAttribute("listarMasJugados"); %>
+
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 
@@ -98,25 +106,26 @@ https://templatemo.com/tm-589-lugx-gaming
 
           <!-- Formulario de venta-->
           <div class = "row venta">
+            <form method="POST" action="<%=request.getContextPath()%>/ServletTendencias">
             <div class="form-group">
               <h5>Ingrese nombre del juego:</h5>
-              <input type="text" class="form-control" aria-label="nombre_juego">
+              <input type="text" class="form-control" name="nombre" id="nombre">
             </div>
 
             <div class="form-group">
               <h5>Descripción:</h5>
-              <textarea class="form-control" id="descripcion_venta"  aria-label="descripcion_venta" rows="3" style="height: 150px"></textarea>
+              <textarea class="form-control" id="descripcion"  name="descripcion" rows="3" style="height: 150px"></textarea>
             </div>
 
             <div class="form-group">
               <div class="row">
                 <div class="col">
                   <h5>Precio unitario:</h5>
-                  <input type="text" class="form-control" id="precio" aria-label="precio">
+                  <input type="text" class="form-control" id="precio_unidad" name="precio_unidad">
                 </div>
                 <div class="col">
                   <h5>Unidades:</h5>
-                  <input type="number" class="form-control" id="unidades" aria-label="unidades" min="0">
+                  <input type="number" class="form-control" id="cantidad_stock" name="cantidad_stock" min="0">
                 </div>
                 <div class="col">
                   <h5>Precio total:</h5>
@@ -152,7 +161,7 @@ https://templatemo.com/tm-589-lugx-gaming
 
 
             </div>
-
+            </form>
           </div>
         </div>
       </div>
@@ -176,7 +185,7 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="caption header-text">
           <div class="row">
             <div class="d-grid gap-2 mx-auto mb-3">
-              <button type="submit" class="btn btn-secondary btn-block" onclick="window.location.href = 'juego_pendiente.html'">
+              <button type="submit" class="btn btn-secondary btn-block" onclick="window.location.href = '/Proyectoiweb_war_exploded/ServletTendencias'">
                 <i class="fa fa-save"></i> Finalizar Solicitud
               </button>
             </div>

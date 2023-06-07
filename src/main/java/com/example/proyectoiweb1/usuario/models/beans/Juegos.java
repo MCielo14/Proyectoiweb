@@ -4,12 +4,13 @@ public class Juegos {
     private int idJuegos;
     private String nombre;
     private String descripcion;
-    private String rating;
+    private float rating;
     private String genero;
+    private String imagen;
     private String consola;
-    private String precio_unidad;
-    private String cantidad_stock;
-    private Boolean estado_activo;
+    private float precio_unidad;
+    private int cantidad_stock;
+    private boolean estado_activo;
 
     public int getIdJuegos() {
         return idJuegos;
@@ -35,11 +36,11 @@ public class Juegos {
         this.descripcion = descripcion;
     }
 
-    public String getRating() {
+    public float getRating() {
         return rating;
     }
 
-    public void setRating(String rating) {
+    public void setRating(float rating) {
         this.rating = rating;
     }
 
@@ -59,27 +60,35 @@ public class Juegos {
         this.consola = consola;
     }
 
-    public String getPrecio_unidad() {
+    public float getPrecio_unidad() {
         return precio_unidad;
     }
 
-    public void setPrecio_unidad(String precio_unidad) {
+    public void setPrecio_unidad(float precio_unidad) {
         this.precio_unidad = precio_unidad;
     }
 
-    public String getCantidad_stock() {
+    public int getCantidad_stock() {
         return cantidad_stock;
     }
 
-    public void setCantidad_stock(String cantidad_stock) {
+    public void setCantidad_stock(int cantidad_stock) {
         this.cantidad_stock = cantidad_stock;
     }
 
-    public Boolean getEstado_activo() {
+    public boolean getEstado_activo() {
         return estado_activo;
     }
 
-    public void setEstado_activo(Boolean estado_activo) {
+    public void setEstado_activo(boolean estado_activo) {
         this.estado_activo = estado_activo;
+    }
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 }

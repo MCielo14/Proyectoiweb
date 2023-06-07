@@ -69,7 +69,7 @@ https://templatemo.com/tm-589-lugx-gaming
           <ul class="nav">
             <li><a href="<%=request.getContextPath()%>/ServletTendencias" class="active">Comprar juegos</a></li>
             <li><a href="<%=request.getContextPath()%>/Usuario/compras_juegos_page.jsp">Mis juegos</a></li>
-            <li><a href="<%=request.getContextPath()%>/Usuario/vender_juegos_page.jsp">Vender juegos</a></li>
+            <li><a href="<%=request.getContextPath()%>/ServletTendencias?a=vender">Vender juegos</a></li>
             <li><a href="<%=request.getContextPath()%>/ServletJuegoPosteado">Tus ventas</a></li>
             <li><a href="<%=request.getContextPath()%>/Usuario/contact.jsp">Contáctanos</a></li>
             <li><a href="<%=request.getContextPath()%>/Usuario/login_page.jsp">Inicia sesión</a></li>
@@ -98,11 +98,13 @@ https://templatemo.com/tm-589-lugx-gaming
           <p>Ergo Proxy es una tienda virtual en la que podrás encontrar el videojuego que estabas buscando e incluso
             ir por una nueva experiencia.</p>
           <div class="search-input">
-            <form id="search" action="#">
-              <input type="text" placeholder="¿Qué juego estás buscando?" id='searchText' name="searchKeyword"
+
+            <form method="post" action="<%=request.getContextPath()%>/ServletTendencias?p=buscar">
+              <input type="text" placeholder="¿Qué juego estás buscando?" name="textoBuscar"
                      onkeypress="handle" />
               <button role="button">Buscar</button>
             </form>
+
           </div>
         </div>
       </div>
