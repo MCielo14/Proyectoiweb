@@ -3,8 +3,8 @@
 <%@ page import="com.example.proyectoiweb1.usuario.models.beans.Juegos" %>
 <%@ page import="com.example.proyectoiweb1.usuario.models.daos.JuegosDaoUsuario" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
-<% ArrayList<Juegos> listaJuegos = (ArrayList<Juegos>) request.getAttribute("listaJuegos"); %>
-<% ArrayList<Juegos> listaMasJugados = (ArrayList<Juegos>) request.getAttribute("listaMasJugados"); %>
+<% ArrayList<Juegos> listarJuegos = (ArrayList<Juegos>) request.getAttribute("listarJuegos"); %>
+<% ArrayList<Juegos> listarMasJugados = (ArrayList<Juegos>) request.getAttribute("listarMasJugados"); %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -133,7 +133,7 @@ https://templatemo.com/tm-589-lugx-gaming
 
       <div class="col-lg-3">
       </div>
-      <% for (Juegos j : listaJuegos) { %>
+      <% for (Juegos j : listarJuegos) { %>
       <div class="col-lg-3 col-md-6">
         <div class="item">
           <div class="thumb">
@@ -145,7 +145,7 @@ https://templatemo.com/tm-589-lugx-gaming
             <h5><%=j.getNombre()%></h5>
             <p class="card-text"><em><%=j.getRating()%></em></p>
             <a href="<%=request.getContextPath()%>/Usuario/metodo_compra_page.jsp"><i class="fa fa-shopping-bag"></i></a>
-            <button onclick="window.location.href = '<%=request.getContextPath()%>/Usuario/informacion_oferta_page.jsp'" role="button" class="btn btn-primary" href="listajuego.html">Más detalles</button>
+            <button onclick="window.location.href = '<%=request.getContextPath()%>/ServletTendencias?a=mostrarDetalles&id=<%=j.getIdJuegos()%>'" role="button" class="btn btn-primary" href="<%=request.getContextPath()%>/ServletPrincipalUser?a=mostrarDetalles&id=<%=j.getIdJuegos()%>">Más detalles</button>
           </div>
         </div>
       </div>
@@ -283,7 +283,7 @@ https://templatemo.com/tm-589-lugx-gaming
         </div>
       </div>
 
-      <% for (Juegos j : listaMasJugados) { %>
+      <% for (Juegos j : listarMasJugados) { %>
       <div class="col-lg-2 col-md-6 col-sm-6">
         <div class="item">
           <div class="thumb">

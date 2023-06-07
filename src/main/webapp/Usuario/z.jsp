@@ -120,7 +120,7 @@ https://templatemo.com/tm-589-lugx-gaming
       <div class="row">
 
         <div class="col-lg-3 col-md-6">
-          <a href="principal_user.jsp">
+          <a href="z.jsp">
             <div class="item">
               <div class="image">
                 <img src="<%=request.getContextPath()%>/Usuario/assets/images/featured-01.png" alt="" style="max-width: 44px;">
@@ -410,7 +410,7 @@ https://templatemo.com/tm-589-lugx-gaming
                        <p>No dejes pasar la oportidad. Tenemos las mejores ofertas todos los meses en los mejores juegos y
                          sagas.</p>
                        <div class="main-button">
-                         <a href="<%=request.getContextPath()%>/Usuario/listajuego.html">Compra ahora</a>
+                         <a href="<%=request.getContextPath()%>/Usuario/xlistajuego.html">Compra ahora</a>
                        </div>
                      </div>
                    </div>

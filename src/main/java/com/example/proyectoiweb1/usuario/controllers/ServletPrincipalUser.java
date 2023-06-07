@@ -18,7 +18,7 @@ public class ServletPrincipalUser extends HttpServlet {
             case "listar" :
                 request.setAttribute("listarJuegos", juegosDaoUsuario.listarJuegos());
                 request.setAttribute("listarMasJugados",juegosDaoUsuario.listarMasJugados());
-                request.getRequestDispatcher("Usuario/principal_user.jsp").forward(request, response);
+                request.getRequestDispatcher("Usuario/z.jsp").forward(request, response);
                 break;
             case "mostrarDetalles" :
                 String id = request.getParameter("id");

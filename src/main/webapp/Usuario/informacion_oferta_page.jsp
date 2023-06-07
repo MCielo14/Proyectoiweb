@@ -4,8 +4,7 @@
 <%@ page import="com.example.proyectoiweb1.usuario.models.daos.JuegosDaoUsuario" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 
-<jsp:useBean id="juego" scope="request" type="Juegos"/>
-
+<% Juegos juegos = (Juegos) request.getAttribute("juegos"); %>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 
@@ -107,7 +106,7 @@ https://templatemo.com/tm-589-lugx-gaming
       <div class="col-lg-6 align-self-center">
         <div class="caption header-text">
 
-          <h3><% juego.getNombre();%></h3>
+          <h3><% juegos.getNombre();%></h3>
           <div class="card-body">
             <h6>Star Rating:</h6>
             <span class="fa fa-star checked"></span>
@@ -121,19 +120,19 @@ https://templatemo.com/tm-589-lugx-gaming
           <!-- Crear el grupo del campo precio -->
           <div class="form-group">
             <h6>Precio:</h6>
-            <label>S/<% juego.getPrecio_unidad();%></label>
+            <label>S/<% juegos.getPrecio_unidad();%></label>
           </div>
           <br>
 
           <div class="form-group">
             <h6>Descripción:</h6>
-            <p> <% juego.getDescripcion();%>
+            <p> <% juegos.getDescripcion();%>
             </p>
           </div>
           <!-- Crear el grupo del campo género -->
           <div class="form-group">
             <h6>Género:</h6>
-            <label><% juego.getGenero();%></label>
+            <label><% juegos.getGenero();%></label>
           </div>
           <br>
 
@@ -141,7 +140,7 @@ https://templatemo.com/tm-589-lugx-gaming
           <div class="form-group">
             <h6>Stock disponible:</h6>
             <!--<input type="number" class="form-control" id="stock" min="0"> <label>unidades</label>-->
-            <label><% juego.getCantidad_stock();%>unidades</label>
+            <label><% juegos.getCantidad_stock();%>unidades</label>
           </div>
           <br>
 

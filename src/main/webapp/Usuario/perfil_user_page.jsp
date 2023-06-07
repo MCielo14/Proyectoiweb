@@ -124,7 +124,7 @@ https://templatemo.com/tm-589-lugx-gaming
 
           <div class="row outsession">
             <div class="d-grid gap-2 mx-auto mb-3">
-              <button type="submit" class="btn btn-secondary btn-block" onclick="window.location.href='principal_user.jsp'">
+              <button type="submit" class="btn btn-secondary btn-block" onclick="window.location.href='z.jsp'">
                 <i class="fa fa-save"></i> Guardar cambios
               </button>
             </div>

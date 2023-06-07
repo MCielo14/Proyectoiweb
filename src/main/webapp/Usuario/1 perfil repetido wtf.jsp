@@ -59,7 +59,7 @@ https://templatemo.com/tm-589-lugx-gaming
           <!-- ***** Logo End ***** -->
           <!-- ***** Menu Start ***** -->
           <ul class="nav">
-            <li><a href="principal_user.jsp" class="active">Home</a></li>
+            <li><a href="z.jsp" class="active">Home</a></li>
             <li><a href="mis_juegos_page.jsp">Lista de juegos</a></li>
             <li><a href="mis_ventas_page.jsp">Tus ventas</a></li>
             <li><a href="contact.jsp">Contáctanos</a></li>

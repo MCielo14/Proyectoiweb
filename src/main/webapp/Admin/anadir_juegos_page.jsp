@@ -182,7 +182,7 @@ https://templatemo.com/tm-589-lugx-gaming
 
           <div class="row">
             <div class="d-grid gap-2 mx-auto mb-3">
-              <button class="btn btn-danger btn-lg" onclick="window.location.href = 'principal_user.jsp'">Cancelar</button>
+              <button class="btn btn-danger btn-lg" onclick="window.location.href = 'z.jsp'">Cancelar</button>
             </div>
           </div>
         </div>

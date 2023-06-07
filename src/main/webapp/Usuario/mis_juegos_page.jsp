@@ -117,7 +117,7 @@ https://templatemo.com/tm-589-lugx-gaming
     <div class="row">
 
       <div class="col-lg-3 col-md-6">
-        <a href="principal_user.jsp">
+        <a href="z.jsp">
           <div class="item">
             <div class="image">
               <img src="assets/images/featured-01.png" alt="" style="max-width: 44px;">
