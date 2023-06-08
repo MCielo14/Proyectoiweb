@@ -146,7 +146,12 @@
                                 <span class="category"><%=j.getGenero_juego_nuevo()%></span>
                                 <h5 class="card-title"><%=j.getNombre_juego_nuevo()%></h5>
                                 <p class="card-text"><em><%=j.getEstado_solicitud()%></em></p>
-                                <button role="button" class="btn btn-primary " onclick="window.location.href = 'juego_pendiente.jsp'">Más detalles</button>
+                                <button role="button" class="btn btn-primary " onclick="window.location.href = '<%=request.getContextPath()%>/ServletJuegoPosteado?a=editarjuego&id_editar=<%=j.getId_publicacion_usuario()%>'">Más detalles</button>
+
+
+                                <td><a onclick="return confirm('Estas seguro de borrar :( ?')" class="btn btn-danger"
+                                       href="<%=request.getContextPath()%>/ServletJuegoPosteado?a=borrar&id=<%=j.getId_publicacion_usuario()%>">Borrar</a>
+                                </td>
                             </div>
                         </div>
                         <%}else if(j.getEstado_solicitud()==2){%>
@@ -200,111 +205,6 @@
                         <%}%>
                     </div>
                     <% }%>
-
-                    <!--
-                    <div class="col-lg-3 col-md-6">
-                      <div class="item">
-                        <div class="thumb">
-                          <a href="#"><img src="assets/images/trending-02.jpg" alt=""></a>
-                        </div>
-                        <div class="down-content">
-                          <span class="category">Action</span>
-                          <h5 class="card-title">The last of us 2</h5>
-                          <p class="card-text"><em>Pendiente</em></p>
-                          <button role="button" class="btn btn-primary" onclick="window.location.href = 'juego_pendiente.html'">Más detalles</button>
-                        </div>
-                      </div>
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-6">
-                      <div class="item">
-                        <div class="thumb">
-                          <a href="#"><img src="assets/images/trending-03.jpg" alt=""></a>
-                        </div>
-                        <div class="down-content">
-                          <span class="category">Action</span>
-                          <h5 class="card-title">The last of us 2</h5>
-                          <p class="card-text"><em>Pendiente</em></p>
-                          <button role="button" class="btn btn-primary" onclick="window.location.href = 'juego_pendiente.html'">Más detalles</button>
-                        </div>
-                      </div>
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-6">
-                      <div class="item" style="background: #ffb207">
-                        <div class="thumb">
-                          <a href="#"><img src="assets/images/trending-04.jpg" alt=""></a>
-                        </div>
-                        <div class="down-content" style="background: #ffb207">
-                          <span class="category">Action</span>
-                          <h5 class="card-title">The last of us 2</h5>
-                          <p class="card-text"><em>No aceptado</em></p>
-                          <button role="button" class="btn btn-primary" onclick="window.location.href = 'juego_no_aceptado.html'">Editar detalles</button>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                      <div class="item"  style="background: #ffb207">
-                        <div class="thumb">
-                          <a href="#"><img src="assets/images/trending-01.jpg" alt=""></a>
-                        </div>
-                        <div class="down-content" style="background: #ffb207">
-                          <span class="category">Action</span>
-                          <h5 class="card-title">The last of us 2</h5>
-                          <p class="card-text"><em>No aceptado</em></p>
-                          <button role="button" class="btn btn-primary" onclick="window.location.href = 'juego_no_aceptado.html'">Editar detalles</button>
-                        </div>
-                      </div>
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-6">
-                      <div class="item" style="background: #ffb207">
-                        <div class="thumb">
-                          <a href="#"><img src="assets/images/trending-02.jpg" alt=""></a>
-                        </div>
-                        <div class="down-content" style="background: #ffb207">
-                          <span class="category">Action</span>
-                          <h5 class="card-title">The last of us 2</h5>
-                          <p class="card-text"><em>No aceptado</em></p>
-                          <button role="button" class="btn btn-primary" onclick="window.location.href = 'juego_no_aceptado.html'">Editar detalles</button>
-                        </div>
-                      </div>
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-6">
-                      <div class="item" style="background: darkgray">
-                        <div class="thumb">
-                          <a href="#"><img src="assets/images/trending-03.jpg" alt=""></a>
-                        </div>
-                        <div class="down-content" style="background: darkgray">
-                          <span class="category">Action</span>
-                          <h5 class="card-title">The last of us 2</h5>
-                          <p class="card-text"><em>Retirado</em></p>
-                          <button role="button" class="btn btn-primary" onclick="window.location.href = 'juego_retirado.html'">Más detalles</button>
-                        </div>
-                      </div>
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-6">
-                      <div class="item" style="background: #ff424b">
-                        <div class="thumb">
-                          <a href="#"><img src="assets/images/trending-04.jpg" alt=""></a>
-                        </div>
-                        <div class="down-content" style="background: #ff424b">
-                          <span class="category">Action</span>
-                          <h5 class="card-title">The last of us 2</h5>
-                          <p class="card-text"><em>Rechazado</em></p>
-                          <button role="button" class="btn btn-primary" onclick="window.location.href = 'juego_rechazado.html'">Más detalles</button>
-                        </div>
-                      </div>
-                    </div>
-                    -->
                 </div>
             </div>
         </div>
@@ -338,68 +238,6 @@
                         </div>
                     </div>
                     <%}%>
-                    <!--
-                    <div class="col-lg-2 col-md-6 col-sm-6">
-                      <div class="item">
-                        <div class="thumb">
-                          <a href="#"><img src="assets/images/top-game-02.jpg" alt=""></a>
-                        </div>
-                        <div class="down-content">
-                          <span class="category">Adventure</span>
-                          <h4>Assasin Creed</h4>
-                          <a href="#">Explore</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6 col-sm-6">
-                      <div class="item">
-                        <div class="thumb">
-                          <a href="#"><img src="assets/images/top-game-03.jpg" alt=""></a>
-                        </div>
-                        <div class="down-content">
-                          <span class="category">Adventure</span>
-                          <h4>Assasin Creed</h4>
-                          <a href="#">Explore</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6 col-sm-6">
-                      <div class="item">
-                        <div class="thumb">
-                          <a href="#"><img src="assets/images/top-game-04.jpg" alt=""></a>
-                        </div>
-                        <div class="down-content">
-                          <span class="category">Adventure</span>
-                          <h4>Assasin Creed</h4>
-                          <a href="#">Explore</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6 col-sm-6">
-                      <div class="item">
-                        <div class="thumb">
-                          <a href="#"><img src="assets/images/top-game-05.jpg" alt=""></a>
-                        </div>
-                        <div class="down-content">
-                          <span class="category">Adventure</span>
-                          <h4>Assasin Creed</h4>
-                          <a href="#">Explore</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6 col-sm-6">
-                      <div class="item">
-                        <div class="thumb">
-                          <a href="#"><img src="assets/images/top-game-06.jpg" alt=""></a>
-                        </div>
-                        <div class="down-content">
-                          <span class="category">Adventure</span>
-                          <h4>Assasin Creed</h4>
-                          <a href="#">Explore</a>
-                        </div>
-                      </div>
-                    </div>
-                    -->
                 </div>
             </div>
         </div>

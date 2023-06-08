@@ -1,4 +1,3 @@
-
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="com.example.proyectoiweb1.usuario.models.beans.Juegos" %>
 <%@ page import="com.example.proyectoiweb1.usuario.models.daos.JuegosDaoUsuario" %>
