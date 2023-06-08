@@ -37,6 +37,21 @@ public class ServletJuegoPosteado extends HttpServlet {
                 request.setAttribute("jueguito", juegoPosteadoDao.listar_juegos(id_editar));
                 request.getRequestDispatcher("Usuario/juego_no_aceptado.jsp").forward(request, response);
                 break;
+            case "rechazado":
+                int id_rec = Integer.parseInt(request.getParameter("id_rec"));
+                request.setAttribute("jueguito_2", juegoPosteadoDao.listar_juegos(id_rec));
+                request.getRequestDispatcher("Usuario/juego_rechazado.jsp").forward(request, response);
+                break;
+            case "pendiente":
+                int id_pen = Integer.parseInt(request.getParameter("id_pen"));
+                request.setAttribute("jueguito_3", juegoPosteadoDao.listar_juegos(id_pen));
+                request.getRequestDispatcher("Usuario/juego_pendiente.jsp").forward(request, response);
+                break;
+            case "retirado":
+                int id_retirado = Integer.parseInt(request.getParameter("id_retirado"));
+                request.setAttribute("jueguito_4", juegoPosteadoDao.listar_juegos(id_retirado));
+                request.getRequestDispatcher("Usuario/juego_retirado.jsp").forward(request, response);
+                break;
         }
 
     }
@@ -69,7 +84,7 @@ public class ServletJuegoPosteado extends HttpServlet {
     public JuegoPosteadoUsuario parseJuegoPosteado(HttpServletRequest request) {
 
         JuegoPosteadoUsuario juegoPosteado = new JuegoPosteadoUsuario();
-        String id_publicacion_usuarioStr = request.getParameter("id_publicacion_usuario") != null ? request.getParameter("id_publicacion_usuario") : "";
+        //String id_publicacion_usuarioStr = request.getParameter("id_publicacion_usuario") != null ? request.getParameter("id_publicacion_usuario") : "";
         String nombre_juego_nuevo = request.getParameter("nombre_juego_nuevo");
         String descripcion_juego_nuevo = request.getParameter("descripcion_juego_nuevo");
         String genero_juego_nuevo = request.getParameter("genero_juego_nuevo");
@@ -77,11 +92,11 @@ public class ServletJuegoPosteado extends HttpServlet {
         String precio_venta_usuarioStr = request.getParameter("precio_venta_usuario");
 
         try {
-            int id_publicacion_usuario = Integer.parseInt(id_publicacion_usuarioStr);
+            //int id_publicacion_usuario = Integer.parseInt(id_publicacion_usuarioStr);
             float precio_venta_usuario = Float.parseFloat(precio_venta_usuarioStr);
 
 
-            juegoPosteado.setId_publicacion_usuario(id_publicacion_usuario);
+            //juegoPosteado.setId_publicacion_usuario(id_publicacion_usuario);
             juegoPosteado.setNombre_juego_nuevo(nombre_juego_nuevo);
             juegoPosteado.setDescripcion_juego_nuevo(descripcion_juego_nuevo);
             juegoPosteado.setGenero_juego_nuevo(genero_juego_nuevo);

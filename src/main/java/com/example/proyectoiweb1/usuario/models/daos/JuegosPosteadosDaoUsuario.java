@@ -118,11 +118,12 @@ public class JuegosPosteadosDaoUsuario {
             try (ResultSet rs = preparedStatement.executeQuery()) {
                 if (rs.next()) {
                     juegoPosteadoUsuario = new JuegoPosteadoUsuario();
-                    juegoPosteadoUsuario.setNombre_juego_nuevo(rs.getString("nombre_juego_nuevo "));
+                    juegoPosteadoUsuario.setNombre_juego_nuevo(rs.getString("nombre_juego_nuevo"));
                     juegoPosteadoUsuario.setDescripcion_juego_nuevo(rs.getString("descripcion_juego_nuevo"));
                     juegoPosteadoUsuario.setPrecio_venta_usuario(rs.getInt("precio_venta_usuario"));
                     juegoPosteadoUsuario.setConsola_juego_nuevo(rs.getString("consola_juego_nuevo"));
                     juegoPosteadoUsuario.setGenero_juego_nuevo(rs.getString("genero_juego_nuevo"));
+                    juegoPosteadoUsuario.setMotivo_rechazo(rs.getString("motivo_rechazo"));
                 }
             }
 
@@ -148,7 +149,7 @@ public class JuegosPosteadosDaoUsuario {
             pstmt.setString(2, juegoPosteado.getDescripcion_juego_nuevo());
             pstmt.setString(3, juegoPosteado.getGenero_juego_nuevo());
             pstmt.setString(4, juegoPosteado.getConsola_juego_nuevo());
-            pstmt.setFloat(5, juegoPosteado.getPrecio_venta_usuario());
+            pstmt.setFloat( 5, juegoPosteado.getPrecio_venta_usuario());
 
             pstmt.executeUpdate();
 

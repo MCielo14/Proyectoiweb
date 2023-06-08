@@ -12,14 +12,14 @@
   <title>Ergo Proxy - Compra y venta de juegos</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<%=request.getContextPath()%>/Usuario/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
   <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/estilo_usuario.css">
-  <link rel="stylesheet" href="assets/css/owl.css">
-  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/Usuario/assets/css/fontawesome.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/Usuario/assets/css/estilo_usuario.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/Usuario/assets/css/owl.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/Usuario/assets/css/animate.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
   <!--
@@ -53,19 +53,19 @@ https://templatemo.com/tm-589-lugx-gaming
       <div class="col-12">
         <nav class="main-nav">
           <!-- ***** Logo Start ***** -->
-          <a href="index.html" class="logo">
-            <img src="assets/images/logo.png" alt="" style="width: 65px;">
+          <a href="<%=request.getContextPath()%>/Usuario/index.html" class="logo">
+            <img src="<%=request.getContextPath()%>/Usuario/assets/images/logo.png" alt="" style="width: 65px;">
           </a>
           <!-- ***** Logo End ***** -->
           <!-- ***** Menu Start ***** -->
           <ul class="nav">
-            <li><a href="tendencia_juegos_page.jsp">Comprar juegos</a></li>
-            <li><a href="compras_juegos_page.jsp">Mis juegos</a></li>
-            <li><a href="vender_juegos_page.jsp">Vender juegos</a></li>
-            <li><a href="mis_ventas_page.jsp">Tus ventas</a></li>
-            <li><a href="contact.jsp">Contáctanos</a></li>
-            <li><a href="login_page.jsp">Inicia sesión</a></li>
-            <li><a href="perfil_user_page.jsp">Perfil<img src="assets/images/profile-header.jpg" style="border-radius: 50%;
+            <li><a href="<%=request.getContextPath()%>/ServletTendencias">Comprar juegos</a></li>
+            <li><a href="<%=request.getContextPath()%>/Usuario/compras_juegos_page.jsp">Mis juegos</a></li>
+            <li><a href="<%=request.getContextPath()%>/ServletTendencias?a=vender">Vender juegos</a></li>
+            <li><a href="<%=request.getContextPath()%>/ServletJuegoPosteado">Tus ventas</a></li>
+            <li><a href="<%=request.getContextPath()%>/Usuario/contact.jsp">Contáctanos</a></li>
+            <li><a href="<%=request.getContextPath()%>/Usuario/login_page.jsp">Inicia sesión</a></li>
+            <li><a href="<%=request.getContextPath()%>/Usuario/perfil_user_page.jsp">Perfil<img src="<%=request.getContextPath()%>/Usuario/assets/images/profile-header.jpg" style="border-radius: 50%;
                 margin-left: 5px; max-width: 30%;" alt=""></a></li>
           </ul>
           <a class='menu-trigger'>
@@ -162,7 +162,7 @@ https://templatemo.com/tm-589-lugx-gaming
       <div class="col-lg-4 offset-lg-2">
         <div class="right-image">
           <h5 style="color: white; margin-bottom: 15px; margin-top: 30px" >Imagen Subida:</h5>
-          <img class="card-img-top" src="assets/images/single-game.jpg" alt="Imagen del juego" id="imagen" alt="Imagen" style="cursor: pointer;">
+          <img class="card-img-top" src="<%=request.getContextPath()%>/Usuario/assets/images/single-game.jpg" alt="Imagen del juego" id="imagen" alt="Imagen" style="cursor: pointer;">
         </div>
       </div>
     </div>
@@ -175,7 +175,7 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="caption header-text">
           <div class="row">
             <div class="d-grid gap-2 mx-auto mb-3">
-              <button type="submit" class="btn btn-secondary btn-block" onclick="window.location.href = 'vender_juegos_page.jsp'">
+              <button type="submit" class="btn btn-secondary btn-block" onclick="window.location.href = '<%=request.getContextPath()%>/Usuario/vender_juegos_page.jsp'">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
                   <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
                 </svg> Enviar otra solicitud
@@ -208,12 +208,12 @@ https://templatemo.com/tm-589-lugx-gaming
 
 <!-- Scripts -->
 <!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/js/isotope.min.js"></script>
-<script src="assets/js/owl-carousel.js"></script>
-<script src="assets/js/counter.js"></script>
-<script src="assets/js/custom.js"></script>
+<script src="<%=request.getContextPath()%>/Usuario/vendor/jquery/jquery.min.js"></script>
+<script src="<%=request.getContextPath()%>/Usuario/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="<%=request.getContextPath()%>/Usuario/assets/js/isotope.min.js"></script>
+<script src="<%=request.getContextPath()%>/Usuario/assets/js/owl-carousel.js"></script>
+<script src="<%=request.getContextPath()%>/Usuario/assets/js/counter.js"></script>
+<script src="<%=request.getContextPath()%>/Usuario/assets/js/custom.js"></script>
 
 </body>
 </html>

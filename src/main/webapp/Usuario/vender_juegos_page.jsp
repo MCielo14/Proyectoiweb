@@ -67,13 +67,13 @@ https://templatemo.com/tm-589-lugx-gaming
           <!-- ***** Logo End ***** -->
           <!-- ***** Menu Start ***** -->
           <ul class="nav">
-            <li><a href="tendencia_juegos_page.jsp">Comprar juegos</a></li>
-            <li><a href="compras_juegos_page.jsp">Mis juegos</a></li>
-            <li><a href="vender_juegos_page.jsp" class="active">Vender juegos</a></li>
-            <li><a href="mis_ventas_page.jsp">Tus ventas</a></li>
-            <li><a href="contact.jsp">Contáctanos</a></li>
-            <li><a href="login_page.jsp">Inicia sesión</a></li>
-            <li><a href="perfil_user_page.jsp">Perfil<img src="<%=request.getContextPath()%>/Usuario/assets/images/profile-header.jpg" style="border-radius: 50%;
+            <li><a href="<%=request.getContextPath()%>/ServletTendencias">Comprar juegos</a></li>
+            <li><a href="<%=request.getContextPath()%>/Usuario/compras_juegos_page.jsp">Mis juegos</a></li>
+            <li><a href="<%=request.getContextPath()%>/ServletTendencias?a=vender" class="active">Vender juegos</a></li>
+            <li><a href="<%=request.getContextPath()%>/ServletJuegoPosteado"></a></li>
+            <li><a href="<%=request.getContextPath()%>/Usuario/contact.jsp">Contáctanos</a></li>
+            <li><a href="<%=request.getContextPath()%>/Usuario/login_page.jsp">Inicia sesión</a></li>
+            <li><a href="<%=request.getContextPath()%>/Usuario/perfil_user_page.jsp">Perfil<img src="<%=request.getContextPath()%>/Usuario/assets/images/profile-header.jpg" style="border-radius: 50%;
                 margin-left: 5px; max-width: 30%;" alt=""></a></li>
           </ul>
           <a class='menu-trigger'>

@@ -70,9 +70,9 @@
                             <!-- ***** Menu Start ***** -->
                             <ul class="nav">
                                 <li><a href="<%=request.getContextPath()%>/ServletTendencias">Comprar juegos</a></li>
-                                <li><a href="<%=request.getContextPath()%>/ServletTendencias">Mis juegos</a></li>
-                                <li><a href="<%=request.getContextPath()%>/Usuario/vender_juegos_page.jsp">Vender juegos</a></li>
-                                <li><a href="<%=request.getContextPath()%>/Usuario/mis_ventas_page.jsp" class="active">Tus ventas</a></li>
+                                <li><a href="<%=request.getContextPath()%>/Usuario/compras_juegos_page.jsp">Mis juegos</a></li>
+                                <li><a href="<%=request.getContextPath()%>/ServletTendencias?a=vender">Vender juegos</a></li>
+                                <li><a href="<%=request.getContextPath()%>/ServletJuegoPosteado" class="active">Tus ventas</a></li>
                                 <li><a href="<%=request.getContextPath()%>/Usuario/contact.jsp">Contáctanos</a></li>
                                 <li><a href="<%=request.getContextPath()%>/Usuario/login_page.jsp">Inicia sesión</a></li>
                                 <li><a href="<%=request.getContextPath()%>/Usuario/perfil_user_page.jsp">Perfil<img src="<%=request.getContextPath()%>/Usuario/assets/images/profile-header.jpg" style="border-radius: 50%;
@@ -145,8 +145,8 @@
                             <div class="down-content">
                                 <span class="category"><%=j.getGenero_juego_nuevo()%></span>
                                 <h5 class="card-title"><%=j.getNombre_juego_nuevo()%></h5>
-                                <p class="card-text"><em><%=j.getEstado_solicitud()%></em></p>
-                                <button role="button" class="btn btn-primary " onclick="window.location.href = '<%=request.getContextPath()%>/ServletJuegoPosteado?a=editarjuego&id_editar=<%=j.getId_publicacion_usuario()%>'">Más detalles</button>
+                                <p class="card-text"><em><%=j.getEstado_solicitud()%> : No aceptado</em></p>
+                                <button role="button" class="btn btn-primary " onclick="window.location.href = '<%=request.getContextPath()%>/ServletJuegoPosteado?a=editarjuego&id_editar=<%=j.getId_publicacion_usuario()%>'">Editar detalles</button>
 
 
                                 <td><a onclick="return confirm('Estas seguro de borrar :( ?')" class="btn btn-danger"
@@ -162,8 +162,8 @@
                             <div class="down-content">
                                 <span class="category"><%=j.getGenero_juego_nuevo()%></span>
                                 <h5 class="card-title"><%=j.getNombre_juego_nuevo()%></h5>
-                                <p class="card-text"><em><%=j.getEstado_solicitud()%></em></p>
-                                <button role="button" class="btn btn-primary " onclick="window.location.href = 'juego_pendiente.jsp'">Más detalles</button>
+                                <p class="card-text"><em><%=j.getEstado_solicitud()%>: Rechazado</em></p>
+                                <button role="button" class="btn btn-primary " onclick="window.location.href = '<%=request.getContextPath()%>/ServletJuegoPosteado?a=rechazado&id_rec=<%=j.getId_publicacion_usuario()%>'">Más detalles</button>
                             </div>
                         </div>
                         <%}else if(j.getEstado_solicitud()==3){%>
@@ -174,8 +174,8 @@
                             <div class="down-content">
                                 <span class="category"><%=j.getGenero_juego_nuevo()%></span>
                                 <h5 class="card-title"><%=j.getNombre_juego_nuevo()%></h5>
-                                <p class="card-text"><em><%=j.getEstado_solicitud()%></em></p>
-                                <button role="button" class="btn btn-primary " onclick="window.location.href = 'juego_pendiente.jsp'">Más detalles</button>
+                                <p class="card-text"><em><%=j.getEstado_solicitud()%>: Aceptado</em></p>
+                                <button role="button" class="btn btn-primary " onclick="window.location.href = '<%=request.getContextPath()%>/ServletJuegoPosteado?a=aceptado'">Más detalles</button>
                             </div>
                         </div>
                         <%}else if(j.getEstado_solicitud()==4){%>
@@ -186,8 +186,8 @@
                             <div class="down-content">
                                 <span class="category"><%=j.getGenero_juego_nuevo()%></span>
                                 <h5 class="card-title"><%=j.getNombre_juego_nuevo()%></h5>
-                                <p class="card-text"><em><%=j.getEstado_solicitud()%></em></p>
-                                <button role="button" class="btn btn-primary " onclick="window.location.href = 'juego_pendiente.jsp'">Más detalles</button>
+                                <p class="card-text"><em><%=j.getEstado_solicitud()%>: Pendiente</em></p>
+                                <button role="button" class="btn btn-primary " onclick="window.location.href = '<%=request.getContextPath()%>/ServletJuegoPosteado?a=pendiente'">Más detalles</button>
                             </div>
                         </div>
                         <%}else if(j.getEstado_solicitud()==5){%>
@@ -198,8 +198,8 @@
                             <div class="down-content">
                                 <span class="category"><%=j.getGenero_juego_nuevo()%></span>
                                 <h5 class="card-title"><%=j.getNombre_juego_nuevo()%></h5>
-                                <p class="card-text"><em><%=j.getEstado_solicitud()%></em></p>
-                                <button role="button" class="btn btn-primary " onclick="window.location.href = 'juego_pendiente.jsp'">Más detalles</button>
+                                <p class="card-text"><em><%=j.getEstado_solicitud()%>: Retirado</em></p>
+                                <button role="button" class="btn btn-primary " onclick="window.location.href = '<%=request.getContextPath()%>/ServletJuegoPosteado?a=retirado'">Más detalles</button>
                             </div>
                         </div>
                         <%}%>

@@ -9,7 +9,7 @@
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/Usuario/css/style.css">
 
 	</head>
 	<body>
@@ -39,7 +39,7 @@
 										<input type="password" class="form-control" required aria-label="password">
 										</div>
 										<div class="form-group">
-											<button type="submit" class="form-control btn btn-primary submit px-3" onclick="window.location.href='tendencia_juegos_page.jsp'">
+											<button type="submit" class="form-control btn btn-primary submit px-3" onclick="window.location.href='<%=request.getContextPath()%>/ServletTendencias'">
 												Inicia sesión
 											</button>
 										</div>
@@ -55,7 +55,7 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<a href="index.html" type="submit" class="form-control btn btn-scnd submit px-3">Página principal</a>
+											<a href="<%=request.getContextPath()%>/Usuario/index.html" type="submit" class="form-control btn btn-scnd submit px-3">Página principal</a>
 										</div>
 									</form>
 								</div>
@@ -67,10 +67,10 @@
 		</div>
 	</section>
 
-	<script src="js/jquery.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
+	<script src="<%=request.getContextPath()%>/Usuario/js/jquery.min.js"></script>
+  <script src="<%=request.getContextPath()%>/Usuario/js/popper.js"></script>
+  <script src="<%=request.getContextPath()%>/Usuario/js/bootstrap.min.js"></script>
+  <script src="<%=request.getContextPath()%>/Usuario/js/main.js"></script>
 
 	</body>
 </html>
