@@ -20,14 +20,14 @@
   <title>Ergo Proxy - Compra y venta de juegos</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<%=request.getContextPath()%>/Usuario/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
   <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/estilo_usuario.css">
-  <link rel="stylesheet" href="assets/css/owl.css">
-  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/Usuario/assets/css/fontawesome.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/Usuario/assets/css/estilo_usuario.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/Usuario/assets/css/owl.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/Usuario/assets/css/animate.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
   <!--
@@ -62,7 +62,7 @@ https://templatemo.com/tm-589-lugx-gaming
         <nav class="main-nav">
           <!-- ***** Logo Start ***** -->
           <a href="index.html" class="logo">
-            <img src="assets/images/logo.png" alt="" style="width: 65px;">
+            <img src="<%=request.getContextPath()%>/Usuario/assets/images/logo.png" alt="" style="width: 65px;">
           </a>
           <!-- ***** Logo End ***** -->
           <!-- ***** Menu Start ***** -->
@@ -73,7 +73,7 @@ https://templatemo.com/tm-589-lugx-gaming
             <li><a href="mis_ventas_page.jsp">Tus ventas</a></li>
             <li><a href="contact.jsp">Contáctanos</a></li>
             <li><a href="login_page.jsp">Inicia sesión</a></li>
-            <li><a href="perfil_user_page.jsp">Perfil<img src="assets/images/profile-header.jpg" style="border-radius: 50%;
+            <li><a href="perfil_user_page.jsp">Perfil<img src="<%=request.getContextPath()%>/Usuario/assets/images/profile-header.jpg" style="border-radius: 50%;
                 margin-left: 5px; max-width: 30%;" alt=""></a></li>
           </ul>
           <a class='menu-trigger'>
@@ -99,14 +99,15 @@ https://templatemo.com/tm-589-lugx-gaming
         </div>
       </div>
     </div>
-
+    <form method="POST" action="<%=request.getContextPath()%>/ServletTendencias">
     <div class="row">
+
       <div class="col-lg-6 align-self-center">
         <div class="caption header-text">
 
           <!-- Formulario de venta-->
           <div class = "row venta">
-            <form method="POST" action="<%=request.getContextPath()%>/ServletTendencias">
+
             <div class="form-group">
               <h5>Ingrese nombre del juego:</h5>
               <input type="text" class="form-control" name="nombre" id="nombre">
@@ -136,7 +137,7 @@ https://templatemo.com/tm-589-lugx-gaming
               <div class="row">
                 <div class="col">
                   <h5>Consola:</h5>
-                  <select class="form-control" id="consola">
+                  <select class="form-control" id="consola" name="consola">
                     <option disabled selected>Selecciona una consola</option>
                     <option>PlayStation</option>
                     <option>Xbox</option>
@@ -146,7 +147,7 @@ https://templatemo.com/tm-589-lugx-gaming
                 </div>
                 <div class="col">
                   <h5>Género:</h5>
-                  <select class="form-control" id="genero">
+                  <select class="form-control" id="genero" name="genero">
                     <option disabled selected>Selecciona un género</option>
                     <option>Acción</option>
                     <option>Aventura</option>
@@ -161,7 +162,6 @@ https://templatemo.com/tm-589-lugx-gaming
 
 
             </div>
-            </form>
           </div>
         </div>
       </div>
@@ -176,34 +176,36 @@ https://templatemo.com/tm-589-lugx-gaming
         </div>
       </div>
     </div>
-
-    <div class="row" style="margin-top: 50px">
-      <div class="col-lg-3 ">
-      </div>
-
-      <div class="col-lg-6 align-self-center">
-        <div class="caption header-text">
-          <div class="row">
-            <div class="d-grid gap-2 mx-auto mb-3">
-              <button type="submit" class="btn btn-secondary btn-block" onclick="window.location.href = '/Proyectoiweb_war_exploded/ServletTendencias'">
-                <i class="fa fa-save"></i> Finalizar Solicitud
-              </button>
-            </div>
-          </div>
-
-
-          <div class="row">
-            <div class="d-grid gap-2 mx-auto mb-3">
-              <button class="btn btn-danger btn-lg" onclick="window.location.href = 'tendencia_juegos_page.html'">Cancelar solicitud</button>
-            </div>
-          </div>
+      <div class="row" style="margin-top: 50px">
+        <div class="col-lg-3 ">
         </div>
-      </div>
 
-      <div class="col-lg-3 align-self-center">
-      </div>
+        <div class="col-lg-6 align-self-center">
+          <div class="caption header-text">
+            <div class="row">
+              <div class="d-grid gap-2 mx-auto mb-3">
+                <button type="submit" class="btn btn-secondary btn-block" onclick="window.location.href = '/Proyectoiweb_war_exploded/ServletTendencias'">
+                  <i class="fa fa-save"></i> Finalizar Solicitud
+                </button>
+              </div>
+            </div>
 
-    </div>
+
+            <div class="row">
+              <div class="d-grid gap-2 mx-auto mb-3">
+                <button class="btn btn-danger btn-lg" onclick="window.location.href = 'tendencia_juegos_page.html'">Cancelar solicitud</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 align-self-center">
+        </div>
+
+      </div>
+    </form>
+
 
   </div>
 
@@ -223,12 +225,12 @@ https://templatemo.com/tm-589-lugx-gaming
 
 <!-- Scripts -->
 <!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/js/isotope.min.js"></script>
-<script src="assets/js/owl-carousel.js"></script>
-<script src="assets/js/counter.js"></script>
-<script src="assets/js/custom.js"></script>
+<script src="<%=request.getContextPath()%>/Usuario/vendor/jquery/jquery.min.js"></script>
+<script src="<%=request.getContextPath()%>/Usuario/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="<%=request.getContextPath()%>/Usuario/assets/js/isotope.min.js"></script>
+<script src="<%=request.getContextPath()%>/Usuario/assets/js/owl-carousel.js"></script>
+<script src="<%=request.getContextPath()%>/Usuario/assets/js/counter.js"></script>
+<script src="<%=request.getContextPath()%>/Usuario/assets/js/custom.js"></script>
 <script>
   const imagen = document.getElementById('imagen');
   const archivo = document.getElementById('archivo');

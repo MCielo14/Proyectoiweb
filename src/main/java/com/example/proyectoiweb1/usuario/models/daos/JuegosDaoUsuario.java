@@ -67,8 +67,8 @@ public class JuegosDaoUsuario {
         return  listaMasJugados;
 
     }
-    public Juegos listar_juego_descripcion(String id) {
-        Juegos juego = null;
+    public Juegos listar_juego_descripcion(int id) {
+        Juegos juego  = new Juegos();
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -81,24 +81,26 @@ public class JuegosDaoUsuario {
         try (Connection connection = DriverManager.getConnection(url, "root", "root");
              PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
 
-            preparedStatement.setString(1, id);
+            preparedStatement.setInt(1, id);
 
             try (ResultSet rs = preparedStatement.executeQuery()) {
                 if (rs.next()) {
-                    juego  = new Juegos();
+
                     juego.setDescripcion(rs.getString("descripcion"));
                     juego.setNombre(rs.getString("nombre"));
                     juego.setPrecio_unidad(rs.getFloat("precio_unidad"));
                     juego.setGenero(rs.getString("genero"));
                     juego.setCantidad_stock(rs.getInt("cantidad_stock"));
+                    System.out.println(juego.getNombre());
                 }
+                return juego;
             }
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
-        return juego;
+
     }
     public void guardar(Juegos juegos) {
         try {
@@ -108,20 +110,17 @@ public class JuegosDaoUsuario {
         }
 
         String url = "jdbc:mysql://localhost:3306/mydb";
-        String sql = "INSERT INTO juegos (idJuegos,nombre,descripcion,rating,genero,imagen,consola,precio_unidad,cantidad_stock,estad_activo) VALUES (?,?,?,?,?)";
+        String sql = "INSERT INTO juegos (nombre,descripcion,genero,consola,precio_unidad,cantidad_stock) VALUES (?,?,?,?,?,?)";
         try (Connection connection = DriverManager.getConnection(url, "root", "root");
              PreparedStatement pstmt = connection.prepareStatement(sql)) {
 
-            pstmt.setInt(1, juegos.getIdJuegos());
-            pstmt.setString(2, juegos.getNombre());
-            pstmt.setString(3, juegos.getDescripcion());
-            pstmt.setFloat(4,juegos.getRating());
-            pstmt.setString(5, juegos.getGenero());
-            pstmt.setString(6, juegos.getImagen());
-            pstmt.setString(7, juegos.getConsola());
-            pstmt.setFloat(8, juegos.getPrecio_unidad());
-            pstmt.setInt(9,juegos.getCantidad_stock());
-            pstmt.setBoolean(10,juegos.getEstado_activo());
+
+            pstmt.setString(1, juegos.getNombre());
+            pstmt.setString(2, juegos.getDescripcion());
+            pstmt.setString(3, juegos.getGenero());
+            pstmt.setString(4, juegos.getConsola());
+            pstmt.setFloat(5, juegos.getPrecio_unidad());
+            pstmt.setInt(6,juegos.getCantidad_stock());
             pstmt.executeUpdate();
 
         } catch (SQLException e) {

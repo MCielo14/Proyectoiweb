@@ -146,8 +146,11 @@ https://templatemo.com/tm-589-lugx-gaming
             <span class="category"><%=j.getGenero()%></span>
             <h5><%=j.getNombre()%></h5>
             <p class="card-text"><em><%=j.getRating()%></em></p>
-            <a href="<%=request.getContextPath()%>/Usuario/metodo_compra_page.jsp"><i class="fa fa-shopping-bag"></i></a>
-            <button onclick="window.location.href = '<%=request.getContextPath()%>/ServletTendencias?a=mostrarDetalles&id=<%=j.getIdJuegos()%>'" role="button" class="btn btn-primary" href="<%=request.getContextPath()%>/ServletPrincipalUser?a=mostrarDetalles&id=<%=j.getIdJuegos()%>">Más detalles</button>
+              <div class="row">
+                  <div class="col-lg-3 col-md-6">
+            <button  onclick="window.location.href = '<%=request.getContextPath()%>/ServletTendencias?a=mostrarDetalles&id=<%=j.getIdJuegos()%>'"role="button" class="btn btn-primary" href="<%=request.getContextPath()%>/ServletTendencias?a=mostrarDetalles&id=<%=j.getIdJuegos()%>">Más detalles</button>
+                  </div>
+              </div>
           </div>
         </div>
       </div>

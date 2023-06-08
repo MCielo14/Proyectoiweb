@@ -43,7 +43,7 @@
 
     <body>
 
-        <!-- ***** Preloader Start ***** -->
+        <!-- ***** Preloader Start ****
         <div id="js-preloader" class="js-preloader">
             <div class="preloader-inner">
                 <span class="dot"></span>
@@ -54,7 +54,7 @@
                 </div>
             </div>
         </div>
-        <!-- ***** Preloader End ***** -->
+         ***** Preloader End ***** -->
 
         <!-- ***** Header Area Start ***** -->
         <header class="header-area header-sticky">
@@ -101,8 +101,8 @@
                             <p>Ergo Proxy es una tienda virtual en la que podrás encontrar el videojuego que estabas buscando e incluso
                                 ir por una nueva experiencia.</p>
                             <div class="search-input">
-                                <form id="search" action="#">
-                                    <input type="text" placeholder="¿Qué juego estás buscando?" id='searchText' name="searchKeyword"
+                                <form method="post" action="<%=request.getContextPath()%>/ServletJuegoPosteado?p=buscar">
+                                    <input type="text" placeholder="¿Qué venta estás buscando?" name="textoBuscar"
                                            onkeypress="handle" />
                                     <button role="button">Buscar</button>
                                 </form>

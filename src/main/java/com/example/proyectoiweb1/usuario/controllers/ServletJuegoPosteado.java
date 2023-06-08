@@ -25,5 +25,20 @@ public class ServletJuegoPosteado extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 
+        String action = request.getParameter("p") == null ? "buscar" : request.getParameter("p");
+
+        JuegosPosteadosDaoUsuario juegoPosteadoDao = new JuegosPosteadosDaoUsuario();
+        JuegosDaoUsuario juegosDao = new JuegosDaoUsuario();
+
+        switch (action) {
+
+            case "buscar":
+                String textoBuscar = request.getParameter("textoBuscar");
+                request.setAttribute("listaJuegosPosteados", juegoPosteadoDao.buscarPorJuegoPosteado(textoBuscar));
+                request.setAttribute("listaMasJugados",juegosDao.listarMasJugados());
+                request.getRequestDispatcher("Usuario/mis_ventas_page.jsp").forward(request, response);
+                break;
+
+        }
     }
 }
